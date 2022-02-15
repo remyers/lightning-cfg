@@ -21,9 +21,11 @@ alias dave-clightning-cli='$CLIGHTNING_CLI --lightning-dir=.lightning/dave'
 ##### Eclair #####
 
 # Set the path to the eclair-node release to use:
-ECLAIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-4451069/bin/eclair-node.sh
+# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-4451069
+ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-8e98b69/bin
+ECLAIR=$ECLAIR_DIR/eclair-node.sh
 # Set the path to the eclair-cli file (see https://github.com/ACINQ/eclair/wiki/Usage):
-ECLAIR_CLI=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-4451069/bin/eclair-cli
+ECLAIR_CLI=$ECLAIR_DIR/eclair-cli
 # Set the path to the eclair logging configuration to use (default one provided in .eclair):
 ECLAIR_LOG_CONF=.eclair/logback.xml
 
