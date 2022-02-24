@@ -3,6 +3,7 @@
 *.cert
 *.key
 regtest
+signet
 data
 bin
 *.sqlite
