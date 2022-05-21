@@ -6,8 +6,8 @@ alias btc-cli='bitcoin-cli -datadir=.bitcoin'
 ##### C-Lightning #####
 
 # Set the path to the lightningd and lightning-cli binaries:
-CLIGHTNING_BIN=/usr/local/bin/lightningd
-CLIGHTNING_CLI=/usr/local/bin/lightning-cli
+CLIGHTNING_BIN=/home/remyers/github/lightning/lightningd/lightningd
+CLIGHTNING_CLI=/home/remyers/github/lightning/cli/lightning-cli
 
 alias alice-clightning='$CLIGHTNING_BIN --lightning-dir=.lightning/alice'
 alias alice-clightning-cli='$CLIGHTNING_CLI --lightning-dir=.lightning/alice'
@@ -21,8 +21,16 @@ alias dave-clightning-cli='$CLIGHTNING_CLI --lightning-dir=.lightning/dave'
 ##### Eclair #####
 
 # Set the path to the eclair-node release to use:
-# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-4451069
-ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-8e98b69/bin
+# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-4451069/bin
+# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-8e98b69/bin
+# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-2446494/bin
+# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-f3c6c78/bin
+# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-8a02b9a/bin
+# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-34cbe9c/bin
+# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-923a230/bin
+# ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-953b487/bin
+ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-fe9422c/bin
+
 ECLAIR=$ECLAIR_DIR/eclair-node.sh
 # Set the path to the eclair-cli file (see https://github.com/ACINQ/eclair/wiki/Usage):
 ECLAIR_CLI=$ECLAIR_DIR/eclair-cli
