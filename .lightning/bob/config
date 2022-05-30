@@ -12,3 +12,4 @@ bitcoin-rpcpassword=password
 log-level=debug
 
 force-feerates=45000
+dev-fast-gossip

@@ -18,6 +18,7 @@
 # .lightning/bob/config
 #   bind-addr=127.0.1.1:9736
 #   announce-addr=dnstest2.co.fr:9736
+#   dev-fast-gossip
 #
 # .eclair/carol/eclair.conf
 #   eclair.server.public-ips=[dnstest3.co.fr]
@@ -28,7 +29,7 @@
 #   }
 #
 # 2) Reset nodes
-#  cd ./.eclair; ./reset_nodes.sh; cd ..; cd ./.lightning; ./reset_nodes.sh; cd ..
+#  ./scripts/reset_all_nodes.sh
 #
 # 3) Start nodes:
 #  alice-eclair & carol-eclair & bob-clightning >& bob-clightning.log &
@@ -37,9 +38,6 @@
 
 # exit when any command fails
 set -e
-
-# expand variable names during script
-# set -o xtrace
 
 # keep track of the last executed command
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
@@ -58,29 +56,28 @@ echo Alice is $ALICE_ID
 echo Bob is $BOB_ID
 echo Carol is $CAROL_ID
 
-echo Adding some Bitcoins to wallets...
+echo Adding some Bitcoin to wallets...
 
 BOB_ADDR=$(bob-clightning-cli newaddr bech32 | jq -r .bech32)
-btc-cli sendtoaddress $BOB_ADDR 15
+btc-cli sendtoaddress $BOB_ADDR 15 >& /dev/null
 
 echo Generating a few blocks to confirm wallet balances...
-btc-cli generatetoaddress 10 $MINER
+btc-cli generatetoaddress 10 $MINER >& /dev/null
 sleep 20
 
 echo Opening channels between Alice and Bob...
-alice-eclair-cli connect --uri=$BOB_ID@dnstest2.co.fr:9736
+alice-eclair-cli connect --uri=$BOB_ID@dnstest2.co.fr:9736 >& /dev/null
 sleep 3
-alice-eclair-cli open --nodeId=$BOB_ID --fundingSatoshis=300000
+alice-eclair-cli open --nodeId=$BOB_ID --fundingSatoshis=300000 >& /dev/null
 sleep 3
-
 echo Opening channels between Bob and Carol...
-bob-clightning-cli connect $CAROL_ID dnstest3.co.fr 9737
+bob-clightning-cli connect $CAROL_ID dnstest3.co.fr 9737 >& /dev/null
 sleep 3
-bob-clightning-cli fundchannel $CAROL_ID 300000
+bob-clightning-cli fundchannel $CAROL_ID 300000 >& /dev/null
 sleep 3
 
 echo Generating a few blocks to confirm channels...
-btc-cli generatetoaddress 10 $MINER
+btc-cli generatetoaddress 10 $MINER >& /dev/null
 sleep 3
 
 echo Creating invoices...
@@ -91,53 +88,62 @@ BOB_INVOICE_5_000=$(bob-clightning-cli invoice  5000000 $RANDOM "BOB invoice2" |
 CAROL_INVOICE_10_000=$(carol-eclair-cli createinvoice --amountMsat=10000000 --description="CAROL invoice1" --expireIn=600 | jq -r .serialized)
 CAROL_INVOICE_20_000=$(carol-eclair-cli createinvoice --amountMsat=20000000 --description="CAROL invoice2" --expireIn=600 | jq -r .serialized)
 
-echo Awaiting confirmations...
-sleep 30
+echo Awaiting gossip sync...
+START=$(date +%s)
+while :; do if [ `alice-eclair-cli allchannels | grep shortChannelId | wc -l` -eq 2 ] && [ `carol-eclair-cli allchannels | grep shortChannelId | wc -l` -eq 2 ]; then break; fi; done
+echo "Gossip sync took $(($(date +%s) - $START)) seconds"
 
 echo Paying invoices...
 
-# ALICE [300,000 sat] : BOB   [0 sat]
-# BOB   [300,000 sat] : CAROL [0 sat]
+# echo "ALICE [300,000 sat] : BOB   [0 sat]"
+# echo "BOB   [300,000 sat] : CAROL [0 sat]"
+# bob-clightning-cli listfunds | jq -r '.channels | .[] | .channel_sat'
 
-echo "BOB -> CAROL"
+echo "1. BOB -> CAROL [10,000]"
 bob-clightning-cli pay $CAROL_INVOICE_10_000 | jq -r .status
-sleep 30
+sleep 5
 
-# ALICE [300,000 sat] : BOB   [0 sat]
-# BOB   [290,000 sat] : CAROL [10,000 sat]
+# echo "ALICE [300,000 sat] : BOB   [0 sat]"
+# echo "BOB   [290,000 sat] : CAROL [10,000 sat]"
+# bob-clightning-cli listfunds | jq -r '.channels | .[] | .channel_sat'
 
-echo "ALICE -> BOB"
+echo "2. ALICE -> BOB [10,000]"
 alice-eclair-cli payinvoice --invoice=$BOB_INVOICE_10_000 --blocking=true | jq -r .type
-sleep 30
+sleep 5
 
-# ALICE [290,000 sat] : BOB   [10,000 sat]
-# BOB   [290,000 sat] : CAROL [10,000 sat]
+# echo "ALICE [290,000 sat] : BOB   [10,000 sat]"
+# echo "BOB   [290,000 sat] : CAROL [10,000 sat]"
+# bob-clightning-cli listfunds | jq -r '.channels | .[] | .channel_sat'
 
-echo "CAROl -> BOB -> ALICE"
+echo "3. CAROl -> BOB -> ALICE [5,000]"
 carol-eclair-cli payinvoice --invoice=$ALICE_INVOICE_5_000 --blocking=true | jq -r .type
-sleep 30
+sleep 5
 
-# ALICE [295,000 sat] : BOB   [5,000 sat]
-# BOB   [295,000 sat] : CAROL [5,000 sat]
+# echo "ALICE [295,000 sat] : BOB   [5,000 sat]"
+# echo "BOB   [295,000 sat] : CAROL [5,000 sat]"
+# bob-clightning-cli listfunds | jq -r '.channels | .[] | .channel_sat'
 
-echo "ALICE -> BOB -> CAROL"
+echo "4. ALICE -> BOB -> CAROL [20,000]"
 alice-eclair-cli payinvoice --invoice=$CAROL_INVOICE_20_000 --blocking=true | jq -r .type
-sleep 60
+sleep 5
 
-# ALICE [275,000 sat] : BOB   [25,000 sat]
-# BOB   [275,000 sat] : CAROL [25,000 sat]
+# echo "ALICE [275,000 sat] : BOB   [25,000 sat]"
+# echo "BOB   [275,000 sat] : CAROL [25,000 sat]"
+# bob-clightning-cli listfunds | jq -r '.channels | .[] | .channel_sat'
 
-echo "BOB -> ALICE"
+echo "5. BOB -> ALICE [10,000]"
 bob-clightning-cli pay $ALICE_INVOICE_10_000 | jq -r .status
-sleep 30
+sleep 5
 
-# ALICE [285,000 sat] : BOB   [15,000 sat]
-# BOB   [275,000 sat] : CAROL [25,000 sat]
+# echo "ALICE [285,000 sat] : BOB   [15,000 sat]"
+# echo "BOB   [275,000 sat] : CAROL [25,000 sat]"
+# bob-clightning-cli listfunds | jq -r '.channels | .[] | .channel_sat'
 
-echo "CAROL -> BOB"
+echo "6. CAROL -> BOB [5,000]"
 carol-eclair-cli payinvoice --invoice=$BOB_INVOICE_5_000 --blocking=true | jq -r .type
 
-# ALICE [285,000 sat] : BOB   [15,000 sat]
-# BOB   [280,000 sat] : CAROL [20,000 sat]
+# echo "ALICE [285,000 sat] : BOB   [15,000 sat]"
+# echo "BOB   [280,000 sat] : CAROL [20,000 sat]"
+# bob-clightning-cli listfunds | jq -r '.channels | .[] | .channel_sat'
 
 echo All invoices paid
