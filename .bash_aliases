@@ -29,7 +29,7 @@ alias dave-clightning-cli='$CLIGHTNING_CLI --lightning-dir=.lightning/dave'
 # ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-34cbe9c/bin
 # ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-923a230/bin
 # ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-953b487/bin
-ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-fe9422c/bin
+ECLAIR_DIR=$HOME/eclair/eclair-node-0.7.1-SNAPSHOT-62897d2/bin
 
 ECLAIR=$ECLAIR_DIR/eclair-node.sh
 # Set the path to the eclair-cli file (see https://github.com/ACINQ/eclair/wiki/Usage):
@@ -53,10 +53,10 @@ LND_BIN=$HOME/go/bin/lnd
 LND_CLI=$HOME/go/bin/lncli
 
 alias alice-lnd='$LND_BIN --lnddir=.lnd/alice'
-alias alice-lnd-cli='$LND_CLI --lnddir=.lnd/alice --rpcserver=localhost:10009 --network=regtest'
+alias alice-lnd-cli='$LND_CLI --lnddir=.lnd/alice --rpcserver=localhost:10009 --network=signet'
 alias bob-lnd='$LND_BIN --lnddir=.lnd/bob'
-alias bob-lnd-cli='$LND_CLI --lnddir=.lnd/bob --rpcserver=localhost:10010 --network=regtest'
+alias bob-lnd-cli='$LND_CLI --lnddir=.lnd/bob --rpcserver=localhost:10010 --network=signet'
 alias carol-lnd='$LND_BIN --lnddir=.lnd/carol'
-alias carol-lnd-cli='$LND_CLI --lnddir=.lnd/carol --rpcserver=localhost:10011 --network=regtest'
+alias carol-lnd-cli='$LND_CLI --lnddir=.lnd/carol --rpcserver=localhost:10011 --network=signet'
 alias dave-lnd='$LND_BIN --lnddir=.lnd/dave'
-alias dave-lnd-cli='$LND_CLI --lnddir=.lnd/dave --rpcserver=localhost:10012 --network=regtest'
+alias dave-lnd-cli='$LND_CLI --lnddir=.lnd/dave --rpcserver=localhost:10012 --network=signet'

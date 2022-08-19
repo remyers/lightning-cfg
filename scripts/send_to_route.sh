@@ -15,11 +15,11 @@ echo Carol is $CAROL_ID
 
 echo Opening channels between Alice and Bob...
 alice-eclair-cli connect --uri=$BOB_ID@localhost:9736
-alice-eclair-cli open --nodeId=$BOB_ID --fundingSatoshis=600000
+alice-eclair-cli open --nodeId=$BOB_ID --fundingSatoshis=100000
 
 echo Opening channels between Bob and Carol...
 bob-eclair-cli connect --uri=$CAROL_ID@localhost:9737
-bob-eclair-cli open --nodeId=$CAROL_ID --fundingSatoshis=500000
+bob-eclair-cli open --nodeId=$CAROL_ID --fundingSatoshis=100000
 
 echo Generating a few blocks to confirm channels...
 MINER=$(btc-cli getnewaddress)
@@ -32,21 +32,21 @@ echo Channels confirmed:
 bob-eclair-cli channels | jq '.[] | {shortChannelId: .data.shortChannelId, capacity: .data.channelUpdate.htlcMaximumMsat}'
 
 echo Generating invoices...
-INVOICE1=$(carol-eclair-cli createinvoice --amountMsat=250000000 --description="yolo" | jq .serialized)
-INVOICE2=$(carol-eclair-cli createinvoice --amountMsat=200000000 --description="swag" | jq .serialized)
+INVOICE1=$(carol-eclair-cli createinvoice --amountMsat=1000000 --description="yolo" | jq .serialized)
+INVOICE2=$(carol-eclair-cli createinvoice --amountMsat=1000000 --description="swag" | jq .serialized)
 
 echo Awaiting broadcast network state...
 sleep 60
 
 echo Paying first invoice
-PAYMENT_ID1=$(alice-eclair-cli sendtoroute --amountMsat=250000000 --nodeIds=$ALICE_ID,$BOB_ID,$CAROL_ID --finalCltvExpiry=16 --invoice=$INVOICE1 | jq .parentId)
+PAYMENT_ID1=$(alice-eclair-cli sendtoroute --amountMsat=1000000 --nodeIds=$ALICE_ID,$BOB_ID,$CAROL_ID --finalCltvExpiry=16 --invoice=$INVOICE1 | jq .parentId)
 sleep 10
 
 echo Checking payment status...
 alice-eclair-cli getsentinfo --id=$PAYMENT_ID1
 
 echo Paying second invoice
-PAYMENT_ID2=$(alice-eclair-cli sendtoroute --amountMsat=200000000 --nodeIds=$ALICE_ID,$BOB_ID,$CAROL_ID --finalCltvExpiry=16 --invoice=$INVOICE2 | jq .parentId)
+PAYMENT_ID2=$(alice-eclair-cli sendtoroute --amountMsat=1000000 --nodeIds=$ALICE_ID,$BOB_ID,$CAROL_ID --finalCltvExpiry=16 --invoice=$INVOICE2 | jq .parentId)
 sleep 10
 
 echo Checking payment status...
