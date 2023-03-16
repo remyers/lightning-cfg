@@ -56,9 +56,9 @@
     </logger>
 
     <!--<logger name="fr.acinq.eclair.router" level="DEBUG"/>-->
-    <!--<logger name="fr.acinq.eclair.channel" level="DEBUG"/>-->
-    <logger name="fr.acinq.eclair.channel.publish" level="DEBUG"/>
-    <logger name="fr.acinq.eclair.payment" level="DEBUG"/>
+    <logger name="fr.acinq.eclair.channel" level="DEBUG"/>
+    <!--<logger name="fr.acinq.eclair.channel.publish" level="DEBUG"/>-->
+    <logger name="fr.acinq.eclair.io" level="DEBUG"/>
 
     <root level="INFO">
         <appender-ref ref="ROLLING"/>
