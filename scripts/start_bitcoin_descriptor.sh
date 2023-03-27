@@ -19,7 +19,7 @@ export XPRV="tprv8ZgxMBicQKsPd7Uf69XL1XwhmjHopUGep8GuEiJDZmbQz6o58LninorQAfcKZWA
 # export XPUB="tpubDCzQCHCjoUGLiNo7fLL3HGxLMyTU8sxe1UiPmGNoRGxYkEuhh7AZMFgvdjWmug3VMw54xvVCrC69Jp5R55CowxxfvgGQJbdHFCpf7sCupVW"
 export XPUB="tpubDCxRWKVAyTh7SCDrwF55VWCNsTWEAcP6erxVQtxajXZB3XDai7rHHusoHGy12BiRzqQt6nz59caVGczBsh4UHTwqdGRnXHgnLDJNcdQGaEC"
 
-# main addresses: m/84h/1h/0h/* (created with private key via bip32.org) 
+# main addresses:   m/84'/1'/0'/0/* (created with private key via bip32.org) 
 export DESCRIPTOR0="wpkh([00000000/84h/1h/0h]$XPUB/0/*)#f9lq250a"
 btc-cli getdescriptorinfo $DESCRIPTOR0
 
