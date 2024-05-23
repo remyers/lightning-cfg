@@ -20,15 +20,17 @@ alias dave-clightning-cli='$CLIGHTNING_CLI --lightning-dir=.lightning/dave'
 
 ##### Eclair #####
 
+VERSION=0.10.1-SNAPSHOT-1113e0b
 # Set the path to the eclair-node release to use:
-ECLAIR_BOB=$HOME/Downloads/eclair-node-0.8.1-SNAPSHOT-e213379-nofundingcreatedorsigned/bin/eclair-node.sh
-ECLAIR=$HOME/Downloads/eclair-node-0.8.1-SNAPSHOT-977a77e/bin/eclair-node.sh
+ECLAIR=$HOME/Downloads/eclair-node-$VERSION/bin/eclair-node.sh
 # Set the path to the eclair-cli file (see https://github.com/ACINQ/eclair/wiki/Usage):
-ECLAIR_CLI=$HOME/Downloads/eclair-node-0.8.1-SNAPSHOT-977a77e/bin/eclair-cli
+ECLAIR_CLI=$HOME/Downloads/eclair-node-$VERSION/bin/eclair-cli
 # Set the path to the eclair logging configuration to use (default one provided in .eclair):
 ECLAIR_LOG_CONF=.eclair/logback.xml
+ECLAIR_PLUGIN=/home/remyers/github/eclair-plugins/channel-funding/target/channel-funding-plugin-0.9.1-SNAPSHOT.jar 
 
-alias alice-eclair='$ECLAIR -Dlogback.configurationFile=$ECLAIR_LOG_CONF -Declair.datadir=.eclair/alice -jvm-debug 5005'
+# add "-jvm-debug 5005" to eclair launch command to debug
+alias alice-eclair='$ECLAIR -Dlogback.configurationFile=$ECLAIR_LOG_CONF -Declair.datadir=.eclair/alice -jvm-debug 5005 $ECLAIR_PLUGIN'
 alias alice-eclair-cli='$ECLAIR_CLI -p password -a localhost:9000'
 alias bob-eclair='$ECLAIR -Dlogback.configurationFile=$ECLAIR_LOG_CONF -Declair.datadir=.eclair/bob'
 alias bob-eclair-cli='$ECLAIR_CLI -p password -a localhost:9001'
@@ -40,7 +42,8 @@ alias dave-eclair-cli='$ECLAIR_CLI -p password -a localhost:9003'
 ##### LND #####
 
 # Set the path to the lnd and lncli binaries:
-LND_BIN=$HOME/go/bin/lnd
+#LND_BIN=$HOME/go/bin/lnd
+LND_BIN=$HOME/github/lnd/lnd-debug
 LND_CLI=$HOME/go/bin/lncli
 
 alias alice-lnd='$LND_BIN --lnddir=.lnd/alice'
