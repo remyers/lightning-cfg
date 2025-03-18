@@ -10,5 +10,7 @@ bitcoind -daemon -datadir=.bitcoin
 
 sleep 3
 
+echo "create new wallet"
+btc-cli createwallet ""
 ADDR=$(btc-cli getnewaddress)
-btc-cli generatetoaddress 150 $ADDR
+btc-cli generatetoaddress 150 $ADDR >& /dev/null

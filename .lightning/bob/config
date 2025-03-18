@@ -1,9 +1,35 @@
-network=regtest
 alias=bob
 
 autolisten=false
-addr=0.0.0.0:9736
+addr=127.0.0.1:9737
 
-bitcoin-rpcport=18443
+bitcoin-datadir=/home/remyers/github/lightning-cfg/.bitcoin 
+# from clightning contrib/startup_regtest.sh
+network=regtest
 bitcoin-rpcuser=user
 bitcoin-rpcpassword=password
+bitcoin-rpcconnect=127.0.0.1
+bitcoin-rpcport=18888
+bitcoin-retry-timeout=30
+log-level=debug
+log-file=cln.log
+allow-deprecated-apis=false
+developer
+dev-fast-gossip
+dev-bitcoind-poll=5
+experimental-dual-fund
+experimental-splicing
+#option_splice
+funder-policy=match
+funder-policy-mod=100
+funder-min-their-funding=10000
+funder-per-channel-max=100000
+funder-fuzz-percent=0
+funder-lease-requests-only=false
+lease-fee-base-sat=2sat
+lease-fee-basis=50
+invoices-onchain-fallback
+# so eclair can update the channel after cln has sent splice_locked
+# funding-confirms=3 
+# so eclair can update the channel before cln has sent splice_locked
+funding-confirms=9

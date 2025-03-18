@@ -3,7 +3,7 @@
 echo Resetting c-lightning nodes...
 
 # Remove databases
-rm -r **/regtest
+rm -rf **/regtest
 rm -r **/*.sqlite3
 
 # Remove pipes

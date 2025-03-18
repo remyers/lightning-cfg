@@ -20,7 +20,7 @@ alias dave-clightning-cli='$CLIGHTNING_CLI --lightning-dir=.lightning/dave'
 
 ##### Eclair #####
 
-VERSION=0.10.1-SNAPSHOT-1113e0b
+VERSION=0.13.0-SNAPSHOT-5065590 # reestablish tests
 # Set the path to the eclair-node release to use:
 ECLAIR=$HOME/Downloads/eclair-node-$VERSION/bin/eclair-node.sh
 # Set the path to the eclair-cli file (see https://github.com/ACINQ/eclair/wiki/Usage):
