@@ -1,0 +1,50 @@
+Alice/eclair: 0.13.0-SNAPSHOT-8370bd2
+Bob/lightningd: v25.02-301-gcca076b
+fund Bob wallet with 1 BTC
+Alice/Eclair is 03158862cb1be9ba49fdc913e3348d5e23809bbdd8431d16dc9c27b3b8783d5ead
+Bob/CLightning is 029ae272191ab1638f50b5ef1b0f1e5cf107be992b7365674080a52261e1f39411
+Alice connects to Bob: connected
+Alice opens channel to Bob
+channelId is ed1ffe28593fcd6f00dd8e6f068929a941d01e5ef9c01bb5ed0929b4fbf1a182
+Confirmed funding index: 0
+Unconfirmed funding index: 
+Funding TXID is 242260f5fdad6ce7ceb75a3542ae343da0ad5e53439ac870f676df508e4314e6
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Alice initiates splice-in of 30000 sat with Bob, splice does not confirm
+Confirmed funding index: 0
+Unconfirmed funding index: 1
+Funding TXID is 242260f5fdad6ce7ceb75a3542ae343da0ad5e53439ac870f676df508e4314e6
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Alice initiates RBF of splice, but aborts after Bob sends tx_accept_rbf
+Confirmed funding index: 0
+Unconfirmed funding index: 1
+Funding TXID is 242260f5fdad6ce7ceb75a3542ae343da0ad5e53439ac870f676df508e4314e6
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Alice RBFs splice-in with Bob, RBF does not confirm
+Confirmed funding index: 0
+Unconfirmed funding index: 1
+1
+Funding TXID is 242260f5fdad6ce7ceb75a3542ae343da0ad5e53439ac870f676df508e4314e6
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Alice pays invoice for 25000 sats to Bob
+Invoice Id: 8882d883-3a07-4c33-9cbe-8df59ff1ab31
+Channel balance amounts match.
+to_alice: 475000000
+to_bob: 25000000
+[bob] invoice is: paid
+== Alice confirms Splice-in RBF of 30000 sat
+Confirmed funding index: 1
+Unconfirmed funding index: 
+Funding TXID is 081eac81b22dad6ebb7db073c3c365a4fa7ee4380cb8692afe89b1cce0c71a4d
+Channel balance amounts match.
+to_alice: 505000000
+to_bob: 25000000
+== Finished

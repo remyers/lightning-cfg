@@ -19,14 +19,33 @@ echo Alice/Eclair is $ALICE_ID
 echo Bob/LND is $BOB_ID
 
 echo Alice connects to Bob 
-alice-eclair-cli connect --nodeId=$BOB_ID
+alice-eclair-cli connect --uri=$BOB_ID@127.0.0.1:9736
 echo Alice opens channel to Bob
-alice-eclair-cli open --nodeId=$BOB_ID --fundingSatoshis=500000 --fundingFeeBudgetSatoshis=2000
-btc-cli generatetoaddress 6 `btc-cli getnewaddress` >& /dev/null
+alice-eclair-cli open --nodeId=$BOB_ID --fundingSatoshis=500000 --pushMsat=250000000 --fundingFeeBudgetSatoshis=3000
+btc-cli generatetoaddress 9 `btc-cli getnewaddress` >& /dev/null
 CHANNEL_POINT=`bob-lnd-cli listchannels | jq -r .channels[0].channel_point`
+echo channel_point is $CHANNEL_POINT
+CHANNEL_ID=`alice-eclair-cli channels | jq -re '.[]|select(.state == "NORMAL")|.channelId'`
+echo channelId is $CHANNEL_ID
+
+# test 1 and 2
 echo Bob creates an invoice
 INVOICE=`bob-lnd-cli addinvoice | jq -r .payment_request`
 echo Bob sends stfu to Alice
 bob-lnd-cli quiesce $CHANNEL_POINT && echo "Bob waits 90 sec for invoice to be settled" && sleep 90 && bob-lnd-cli listinvoices | jq --arg invoice "$INVOICE" -e '.invoices[]|select(.payment_request == $invoice)' | (grep "state" || { echo "Invoice not settled!"; exit 1; }) &
 echo Alice pays the invoice before responding to Bob with stfu
 alice-eclair-cli payinvoice --invoice=$INVOICE --amountMsat=1000000
+
+# test 3
+echo Alice creates invoices for Bob
+INVOICEA1=`alice-eclair-cli createinvoice --description=invoice_1 | jq -r .serialized`
+INVOICEA2=`alice-eclair-cli createinvoice --description=invoice_2 | jq -r .serialized`
+INVOICEA3=`alice-eclair-cli createinvoice --description=invoice_3 | jq -r .serialized`
+echo Bob sends payments to Alice, but Alice does not immediately pay them
+bob-lnd-cli payinvoice --pay_req $INVOICEA1 --amt 2222 --force &
+bob-lnd-cli payinvoice --pay_req $INVOICEA2 --amt 3333 --force &
+bob-lnd-cli payinvoice --pay_req $INVOICEA3 --amt 4444 --force &
+echo Bob sends stfu to Alice, Alice sends updates to Bob either before or after sending stfu
+bob-lnd-cli quiesce $CHANNEL_POINT
+alice-eclair-cli close --channelId=$CHANNEL_ID
+btc-cli generatetoaddress 9 `btc-cli getnewaddress` >& /dev/null

@@ -1,0 +1,33 @@
+Alice/eclair: 0.13.0-SNAPSHOT-8370bd2
+Bob/lightningd: v25.02-301-gcca076b
+fund Bob wallet
+ea0a644834dc8917797d572bc8bd54430266a38d37a6bfca0dfa3bbd90729943
+Alice/Eclair is 0291d70dc9f996ec86b14d240261e6d16c556686f99c760d6a40e0909fdeb64dcc
+Bob/CLightning is 03d9f25cb9b874e36b33331cf7f3368057fb19b1bea8733ad61b99c02213aeaf89
+Alice connects to Bob: connected
+Alice opens channel to Bob
+channelId is c1c4b53fdfba4a1f1cad3766d70038633ddce3f3497b48b51f3b3e5dc5d64e8a
+Confirmed funding index: 0
+Unconfirmed funding index: 
+Funding TXID is 2739177417f8f86a4e55af669e0123a0ae03c1725c3ad7650490b0c388e7c4c5
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Alice initiates splice-in of 15005 sat, but disconnects before Bob receives her tx_signatures and new update commit_sigs
+== Test: Disconnection with both sides sending tx_signatures and channel updates
+Invoice Id: 5ae75756-d914-4ff3-be50-8cfc5eb7a539
+Not sending our tx_signatures for interop test: Disconnection with both sides sending tx_signatures and channel updates
+Not sending our update_add_htlc for interop test: Disconnection with both sides sending tx_signatures and channel updates
+Not sending our commit sigs for interop test: Disconnection with both sides sending tx_signatures and channel updates
+Channel balance amounts match.
+to_alice: 484995000
+to_bob: 15005000
+[bob] invoice is: paid
+Alice resends tx_signatures, update_add_htlc and commit_sig after reconnecting
+Confirmed funding index: 1
+Unconfirmed funding index: 
+Funding TXID is 9e943fa8fa17f867e74227675a2d17f9f03cdfbb07a7e676125b2e68290e99f2
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 15005000
+== Finished

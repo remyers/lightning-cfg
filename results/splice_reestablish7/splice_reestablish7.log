@@ -1,0 +1,29 @@
+Alice/eclair: 0.13.0-SNAPSHOT-8370bd2
+Bob/lightningd: v25.02-301-gcca076b
+fund Bob wallet
+925ff418940814530760a0463b644c77df6b47824a835bd670e3b4a1716996d9
+Alice/Eclair is 02a0f8665492c55779e46233c63b7f8ca9a9552eb46eab5c9e8e6f95330ce98e50
+Bob/CLightning is 03b0faaedb96a4a4c1384f224b68f4f15d272cf3b2405ce07680a89dde9f5d1a1c
+Alice connects to Bob: connected
+Alice opens channel to Bob
+channelId is 421b12227e35036edbc0d01f3c656d70de611a4183995a12581658a864f0ccaf
+Confirmed funding index: 0
+Unconfirmed funding index: 
+Funding TXID is 78ec39b91d705b10bed1b023f61995f0639bc804d587bd2eec4ebfc900c54431
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Test: Disconnection after exchanging tx_signatures and both sides send commit_sig for channel update; revoke_and_ack not received
+Alice sends update_add_htlc and disconnects before sending commit_sigs to Bob
+Invoice Id: e87d27af-b08b-48f3-bb4d-23bd1a641db7
+Log check passed: Ignoring revoke_and_ack for interop test: Disconnection after exchanging tx_signatures and both sides send commit_sig for channel update; revoke_and_ack not received (x1)
+Log check passed: Ignoring commit sigs for interop test: Disconnection after exchanging tx_signatures and both sides send commit_sig for channel update; revoke_and_ack not received (x1)
+Alice resends update_add_htlc and commit_sig after reconnecting
+Log check passed: IN msg=RevokeAndAck (x4)
+Confirmed funding index: 1
+Unconfirmed funding index: 
+Funding TXID is 0a72488b9e0f287067c36ded1c8e955a7c2f22f27dce777049c5372eaf834652
+Channel balance amounts match.
+to_alice: 415009000
+to_bob: 100000000
+== Finished

@@ -1,0 +1,45 @@
+Alice/eclair: 0.13.0-SNAPSHOT-8370bd2
+Bob/lightningd: v25.02-301-gcca076b
+fund Bob wallet
+9ebebcb2ed8867a89698d762ef239399b7f1ed6f3dcc24a76cb9375d60a38276
+Alice/Eclair is 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179
+Bob/CLightning is 03837ac1dd5393ee054b54fb820112502fecb49894781ca00eb8161a398a8e2777
+Alice connects to Bob: connected
+Alice opens channel to Bob
+channelId is b8e453c3ea3873600ebdfaba36405aa4b077c63c7f45cd398f55521cb0935679
+Confirmed funding index: 0
+Unconfirmed funding index: 
+Funding TXID is d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Alice pays invoice for 50000 sats to Bob
+Invoice Id: 4483abfd-b4e0-48d3-b780-9f6be6b71ab3
+Channel balance amounts match.
+to_alice: 450000000
+to_bob: 50000000
+[bob] invoice is: paid
+== Alice initiates splice-in of 15001 sat with Bob, Alice disconnects before Bob receives their tx_complete and commit_sig
+== Test: Disconnection with one side sending commit_sig
+already connected
+Log check passed: Not sending final tx_complete for interop test: Disconnection with one side sending commit_sig (x1)
+Log check passed: Not sending commit_sig for interop test: Disconnection with one side sending commit_sig (x1)
+Log check passed: our peer aborted the splice attempt: ascii='next_funding_txid not recognized. Sending tx_abort.' (x1)
+Confirmed funding index: 0
+Unconfirmed funding index: 
+Funding TXID is d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624
+Channel balance amounts match.
+to_alice: 450000000
+to_bob: 50000000
+== Alice initiates splice-in of 15002 sat with Bob, Alice disconnects before sending their commit_sig
+== Test: Disconnection with both sides sending commit_sig
+already connected
+Log check passed: received sig for batch of size=1 for fundingTxId (x1)
+Log check passed: Not sending commit_sig for interop test: Disconnection with both sides sending commit_sig (x1)
+Confirmed funding index: 1
+Unconfirmed funding index: 
+Funding TXID is d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624
+Channel balance amounts match.
+to_alice: 465002000
+to_bob: 50000000
+== Finished

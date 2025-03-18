@@ -8,3 +8,6 @@ bin
 *.sqlite
 *.sqlite3
 *.pid
+testnet3
+testnet
+!results/**/*.log

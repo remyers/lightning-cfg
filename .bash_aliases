@@ -20,14 +20,16 @@ alias dave-clightning-cli='$CLIGHTNING_CLI --lightning-dir=.lightning/dave'
 
 ##### Eclair #####
 
-VERSION=0.10.1-SNAPSHOT-1113e0b
+# VERSION=0.13.0-SNAPSHOT-4c511e6 # successful interop with clightning May 15, 2025
+# VERSION=0.13.0-SNAPSHOT-262f541 # includes start_batch changes to spec
+VERSION=0.13.0-SNAPSHOT-8370bd2 # splicing-official-interop-nobatch branch
 # Set the path to the eclair-node release to use:
 ECLAIR=$HOME/Downloads/eclair-node-$VERSION/bin/eclair-node.sh
 # Set the path to the eclair-cli file (see https://github.com/ACINQ/eclair/wiki/Usage):
 ECLAIR_CLI=$HOME/Downloads/eclair-node-$VERSION/bin/eclair-cli
 # Set the path to the eclair logging configuration to use (default one provided in .eclair):
 ECLAIR_LOG_CONF=.eclair/logback.xml
-ECLAIR_PLUGIN=/home/remyers/github/eclair-plugins/channel-funding/target/channel-funding-plugin-0.9.1-SNAPSHOT.jar 
+#ECLAIR_PLUGIN=/home/remyers/github/eclair-plugins/channel-funding/target/channel-funding-plugin-0.9.1-SNAPSHOT.jar 
 
 # add "-jvm-debug 5005" to eclair launch command to debug
 alias alice-eclair='$ECLAIR -Dlogback.configurationFile=$ECLAIR_LOG_CONF -Declair.datadir=.eclair/alice -jvm-debug 5005 $ECLAIR_PLUGIN'

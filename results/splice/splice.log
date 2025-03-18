@@ -1,0 +1,73 @@
+Alice/eclair: 0.13.0-SNAPSHOT-8370bd2
+Bob/lightningd: v25.02-301-gcca076b
+fund Bob wallet with 1 BTC
+Alice/Eclair is 02cab08072c42d7a07bfd29dc1292fa4eac77042f3c77e544e3f3fdd6667e8a5b2
+Bob/CLightning is 03d599630b25cf3c506e3418c3d2f607250373e968dd9c7fb50e4a35e769f648c1
+Alice connects to Bob: connected
+Alice opens channel to Bob
+channelId is 01c5597c4e748fd200a6c7578836c0932855b3dbd08b64cb2e646ee7f681f98d
+Confirmed funding index: 0
+Unconfirmed funding index: 
+Funding TXID is f4ac155822614f654701fafaacdb8ec1c2d73948c0e479ffe2c3567ddb4e4d7e
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Alice initiates splice-in of 15000 sat with Bob
+Confirmed funding index: 1
+Unconfirmed funding index: 
+Funding TXID is f2545735e54f9ff49cf36c796bdbf400f6633d21f33b46a29f541be0ed5ed4d6
+Channel balance amounts match.
+to_alice: 515000000
+to_bob: 0
+== Alice pays invoice for 100000 sats to Bob
+Invoice Id: d2c49be4-58b4-4e87-9046-dbebfaccf8cf
+== Bob pays invoice for 50000 sats to Alice
+Invoice Id: f85065bbd55937fb017f05d2647821d109bfc9161e8f4f503708193f21473e57
+Channel balance amounts match.
+to_alice: 465000000
+to_bob: 50000000
+[bob] invoice is: paid
+== Bob initiates splice-in of 10000 sats with Alice
+Confirmed funding index: 2
+Unconfirmed funding index: 
+Funding TXID is 3cfb6c9fa1b316a6b6b7b188cf4e704c754096652d2db6031f8ec39efed32aae
+Channel balance amounts match.
+to_alice: 465000000
+to_bob: 60000000
+== Bob initiates splice-out of 16000 sats with Alice
+Confirmed funding index: 3
+Unconfirmed funding index: 
+Funding TXID is df7ee290b323b507bd6f8eb65e6a7f04854182d958c39246b49871d140ce6c9e
+Channel balance amounts match.
+to_alice: 465000000
+to_bob: 44000000
+== Alice initiates splice-out of 20000 sat with Bob
+Confirmed funding index: 4
+Unconfirmed funding index: 
+Funding TXID is 29eec8af3a78657d865c0a3d7d7ff53fb4614f984dfe5719fe7b7db985f56a93
+Channel balance amounts match.
+to_alice: 444814000
+to_bob: 44000000
+== Alice initiates splice-in of 30000 sat with Bob, splice does not confirm
+Confirmed funding index: 4
+Unconfirmed funding index: 5
+Funding TXID is 29eec8af3a78657d865c0a3d7d7ff53fb4614f984dfe5719fe7b7db985f56a93
+Channel balance amounts match.
+to_alice: 444814000
+to_bob: 44000000
+== Alice pays invoice for 25000 sats to Bob
+Invoice Id: 7eee007a-750e-4da6-be4f-fcfa19abc34e
+Channel balance amounts match.
+to_alice: 419814000
+to_bob: 69000000
+[bob] invoice is: paid
+== Alice confirms Splice-in of 30000 sat
+Confirmed funding index: 5
+Unconfirmed funding index: 
+Funding TXID is a2532d7b30ff43af358be3661a760a612b948f7688c7ead87a6b6391966d3ee5
+Channel balance amounts match.
+to_alice: 449814000
+to_bob: 69000000
+== Alice pays invoice from Bob after splices
+Invoice Id: 319cd39a-eb1a-4d42-a0be-5412b4b0990b
+== Finished

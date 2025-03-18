@@ -1,0 +1,37 @@
+Alice/eclair: 0.13.0-SNAPSHOT-8370bd2
+Bob/lightningd: v25.02-301-gcca076b
+fund Bob wallet
+2148daf1870f4d0562f1b2e15d8388282df0872460aabc5aac2531adc381f21e
+Alice/Eclair is 02d26e5def7984f04a5ed5a223f0bf50a76822f674bd1a9e6210cd2428530da6d5
+Bob/CLightning is 02f1b0cab6e9df7e89a4e665929d2ca0f0b46bf89e63d18e9a6e1dd6e232d7bbb7
+Alice connects to Bob: connected
+Alice opens channel to Bob
+channelId is 0b699bead8cc039f8581e1bbd6e463726357e6a2c456c87c2fbbead6925d08ed
+Confirmed funding index: 0
+Unconfirmed funding index: 
+Funding TXID is f6105a4702368377a0dcf5b831c2ab7468636cd8afe84b00ed06ef64df36f738
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Test: Disconnection with concurrent splice_locked
+Alice disconnects before sending splice_locked to Bob
+Log check passed: Not sending our splice_locked for interop test: Disconnection with concurrent splice_locked (x1)
+Bob sends splice_locked, but Alice ignores it and disconnects
+Log check passed: Ignoring splice_locked for interop test: Disconnection with concurrent splice_locked (x1)
+Alice sends update_add_htlc at the same time as Bob re-sends splice_locked
+Log check passed: peer is connected (x3)
+Alice sends update_add_htlc immediately when reconnected to Bob
+Invoice Id: 6f87f9c9-7188-4784-9ed9-53795cb734df
+Log check passed: OUT msg=UpdateAddHtlc (x1)
+Log check passed: OUT msg=CommitSig (x8)
+Alice does not process splice_locked from Bob immediately
+Log check passed: Deferring processing splice_locked from peer for interop test (x1)
+Log check passed: setting remoteFundingStatus=Locked (x6)
+Alice processes splice_locked from Bob after she sends update_add_htlc and commit_sig: this is fine.
+Confirmed funding index: 1
+Unconfirmed funding index: 
+Funding TXID is 96bbad7ac37d4c7430e6e41540d8ccb07db5690cbb6daa7f9fa93e3bf041cdb3
+Channel balance amounts match.
+to_alice: 415006000
+to_bob: 100000000
+== Finished

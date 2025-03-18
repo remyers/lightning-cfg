@@ -1,0 +1,806 @@
+2025-05-23T12:09:09.688Z INFO    lightningd: v25.02-301-gcca076b
+2025-05-23T12:09:10.005Z INFO    lightningd: Creating configuration directory /home/remyers/github/lightning-cfg/.lightning/bob/regtest
+2025-05-23T12:09:10.005Z DEBUG   lightningd: Opened log file cln.log
+2025-05-23T12:09:10.006Z DEBUG   plugin-manager: started(1479081) /usr/local/libexec/c-lightning/plugins/autoclean
+2025-05-23T12:09:10.007Z DEBUG   plugin-manager: started(1479082) /usr/local/libexec/c-lightning/plugins/chanbackup
+2025-05-23T12:09:10.007Z DEBUG   plugin-manager: started(1479083) /usr/local/libexec/c-lightning/plugins/bcli
+2025-05-23T12:09:10.008Z DEBUG   plugin-manager: started(1479084) /usr/local/libexec/c-lightning/plugins/commando
+2025-05-23T12:09:10.009Z DEBUG   plugin-manager: started(1479085) /usr/local/libexec/c-lightning/plugins/funder
+2025-05-23T12:09:10.009Z DEBUG   plugin-manager: started(1479086) /usr/local/libexec/c-lightning/plugins/topology
+2025-05-23T12:09:10.010Z DEBUG   plugin-manager: started(1479087) /usr/local/libexec/c-lightning/plugins/exposesecret
+2025-05-23T12:09:10.011Z DEBUG   plugin-manager: started(1479088) /usr/local/libexec/c-lightning/plugins/keysend
+2025-05-23T12:09:10.011Z DEBUG   plugin-manager: started(1479089) /usr/local/libexec/c-lightning/plugins/offers
+2025-05-23T12:09:10.012Z DEBUG   plugin-manager: started(1479090) /usr/local/libexec/c-lightning/plugins/pay
+2025-05-23T12:09:10.012Z DEBUG   plugin-manager: started(1479091) /usr/local/libexec/c-lightning/plugins/recklessrpc
+2025-05-23T12:09:10.013Z DEBUG   plugin-manager: started(1479092) /usr/local/libexec/c-lightning/plugins/recover
+2025-05-23T12:09:10.014Z DEBUG   plugin-manager: started(1479093) /usr/local/libexec/c-lightning/plugins/txprepare
+2025-05-23T12:09:10.014Z DEBUG   plugin-manager: started(1479094) /usr/local/libexec/c-lightning/plugins/cln-renepay
+2025-05-23T12:09:10.015Z DEBUG   plugin-manager: started(1479095) /usr/local/libexec/c-lightning/plugins/cln-xpay
+2025-05-23T12:09:10.016Z DEBUG   plugin-manager: started(1479096) /usr/local/libexec/c-lightning/plugins/spenderp
+2025-05-23T12:09:10.016Z DEBUG   plugin-manager: started(1479097) /usr/local/libexec/c-lightning/plugins/cln-askrene
+2025-05-23T12:09:10.017Z DEBUG   plugin-manager: started(1479098) /usr/local/libexec/c-lightning/plugins/sql
+2025-05-23T12:09:10.017Z DEBUG   plugin-manager: started(1479099) /usr/local/libexec/c-lightning/plugins/cln-grpc
+2025-05-23T12:09:10.018Z DEBUG   plugin-manager: started(1479100) /usr/local/libexec/c-lightning/plugins/clnrest
+2025-05-23T12:09:10.019Z DEBUG   plugin-manager: started(1479101) /usr/local/libexec/c-lightning/plugins/cln-lsps-client
+2025-05-23T12:09:10.019Z DEBUG   plugin-manager: started(1479102) /usr/local/libexec/c-lightning/plugins/cln-lsps-service
+2025-05-23T12:09:10.019Z DEBUG   plugin-manager: started(1479103) /usr/local/libexec/c-lightning/plugins/bookkeeper
+2025-05-23T12:09:10.020Z DEBUG   plugin-manager: started(1479104) /usr/local/libexec/c-lightning/plugins/wss-proxy/wss-proxy
+2025-05-23T12:09:10.042Z INFO    plugin-wss-proxy: Killing plugin: disabled itself: No module named 'websockets'
+2025-05-23T12:09:10.042Z UNUSUAL plugin-bookkeeper: topic 'utxo_deposit' is not a known notification topic
+2025-05-23T12:09:10.042Z UNUSUAL plugin-bookkeeper: topic 'utxo_spend' is not a known notification topic
+2025-05-23T12:09:10.042Z DEBUG   lightningd: io_break: check_plugins_manifests
+2025-05-23T12:09:10.042Z DEBUG   lightningd: io_loop_with_timers: plugins_init
+2025-05-23T12:09:10.044Z DEBUG   lightningd: testing /usr/local/bin/../libexec/c-lightning/lightning_channeld
+2025-05-23T12:09:10.045Z DEBUG   lightningd: testing /usr/local/bin/../libexec/c-lightning/lightning_closingd
+2025-05-23T12:09:10.046Z DEBUG   lightningd: testing /usr/local/bin/../libexec/c-lightning/lightning_connectd
+2025-05-23T12:09:10.047Z DEBUG   lightningd: testing /usr/local/bin/../libexec/c-lightning/lightning_gossipd
+2025-05-23T12:09:10.048Z DEBUG   lightningd: testing /usr/local/bin/../libexec/c-lightning/lightning_hsmd
+2025-05-23T12:09:10.049Z DEBUG   lightningd: testing /usr/local/bin/../libexec/c-lightning/lightning_onchaind
+2025-05-23T12:09:10.050Z DEBUG   lightningd: testing /usr/local/bin/../libexec/c-lightning/lightning_openingd
+2025-05-23T12:09:10.051Z DEBUG   hsmd: pid 1479164, msgfd 66
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_CHECK_PUBKEY
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_SIGN_ANY_DELAYED_PAYMENT_TO_US
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_SIGN_ANCHORSPEND
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_SIGN_HTLC_TX_MINGLE
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_SIGN_SPLICE_TX
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_CHECK_OUTPOINT
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_FORGET_CHANNEL
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_REVOKE_COMMITMENT_TX
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_SIGN_BOLT12_2
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_BIP137_SIGN_MESSAGE
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_PREAPPROVE_INVOICE_CHECK
+2025-05-23T12:09:10.060Z DEBUG   hsmd: capability +WIRE_HSMD_PREAPPROVE_KEYSEND_CHECK
+2025-05-23T12:09:10.061Z INFO    lightningd: Creating database
+2025-05-23T12:09:10.104Z DEBUG   connectd: pid 1479168, msgfd 70
+2025-05-23T12:09:10.104Z DEBUG   hsmd: preinit: dev_fail_preapprove = 0, dev_no_preapprove_check = 0, dev_warn_on_overgrind = 0
+2025-05-23T12:09:10.104Z UNUSUAL hsmd: HSM: created new hsm_secret file
+2025-05-23T12:09:10.104Z DEBUG   hsmd: Client: Received message 27 from client
+2025-05-23T12:09:10.104Z DEBUG   hsmd: Client: Received message 27 from client
+2025-05-23T12:09:10.104Z DEBUG   hsmd: Client: Received message 27 from client
+2025-05-23T12:09:10.104Z DEBUG   hsmd: new_client: 0
+2025-05-23T12:09:10.105Z DEBUG   connectd: Created listener on 127.0.0.1:9737
+2025-05-23T12:09:10.105Z DEBUG   connectd: REPLY WIRE_CONNECTD_INIT_REPLY with 0 fds
+2025-05-23T12:09:10.105Z DEBUG   lightningd: io_break: connect_init_done
+2025-05-23T12:09:10.105Z DEBUG   lightningd: io_loop: connectd_init
+2025-05-23T12:09:10.124Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-05-23T12:09:10.124Z DEBUG   lightningd: io_break: plugin_config_cb
+2025-05-23T12:09:10.124Z DEBUG   lightningd: io_loop_with_timers: config_plugin
+2025-05-23T12:09:10.124Z DEBUG   lightningd: All Bitcoin plugin commands registered
+2025-05-23T12:09:10.143Z DEBUG   lightningd: Adding block 120: 13bf99d10e75da9b71b07e8acf4bf44a4f5195955c7f68e99d6083dbd051df00
+2025-05-23T12:09:10.145Z DEBUG   wallet: Loaded 0 channels from DB
+2025-05-23T12:09:10.146Z DEBUG   gossipd: pid 1479179, msgfd 69
+2025-05-23T12:09:10.146Z DEBUG   hsmd: new_client: 0
+2025-05-23T12:09:10.147Z DEBUG   gossipd: Store compact time: 0 msec
+2025-05-23T12:09:10.147Z DEBUG   gossipd: gossip_store: Read 0/0/0/0 cannounce/cupdate/nannounce/delete from store in 0 bytes, now 1 bytes (populated=false)
+2025-05-23T12:09:10.147Z DEBUG   gossipd: seeker: state = STARTING_UP New seeker
+2025-05-23T12:09:10.147Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_INIT_REPLY with 0 fds
+2025-05-23T12:09:10.147Z DEBUG   lightningd: io_break: gossipd_init_done
+2025-05-23T12:09:10.147Z DEBUG   lightningd: io_loop: gossip_init
+2025-05-23T12:09:10.148Z DEBUG   lightningd: Looking for [autoclean,succeededforwards,num]
+2025-05-23T12:09:10.149Z DEBUG   plugin-clnrest: Killing plugin: disabled itself at init: `clnrest-port` option is not configured
+2025-05-23T12:09:10.149Z DEBUG   plugin-cln-lsps-service: Killing plugin: disabled itself at init: `dev-lsps-service` not enabled
+2025-05-23T12:09:10.149Z DEBUG   lightningd: Looking for [autoclean,failedforwards,num]
+2025-05-23T12:09:10.150Z DEBUG   plugin-recover: Recover Plugin Initialised!
+2025-05-23T12:09:10.150Z DEBUG   plugin-recover: Gossmap loaded!
+2025-05-23T12:09:10.150Z DEBUG   plugin-recklessrpc: plugin initialized!
+2025-05-23T12:09:10.150Z DEBUG   plugin-recklessrpc: lightning-dir: /home/remyers/github/lightning-cfg/.lightning/bob/regtest/.lightning/bob
+2025-05-23T12:09:10.151Z DEBUG   lightningd: Looking for [autoclean,succeededpays,num]
+2025-05-23T12:09:10.151Z DEBUG   hsmd: Client: Received message 27 from client
+2025-05-23T12:09:10.152Z DEBUG   lightningd: Looking for [autoclean,failedpays,num]
+2025-05-23T12:09:10.152Z DEBUG   plugin-chanbackup: Chanbackup Initialised!
+2025-05-23T12:09:10.152Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2025-05-23T12:09:10.152Z DEBUG   lightningd: Looking for [askrene,layers]
+2025-05-23T12:09:10.153Z DEBUG   plugin-cln-grpc: Generating a new keypair in "/home/remyers/github/lightning-cfg/.lightning/bob/regtest/ca-key.pem", it didn't exist
+2025-05-23T12:09:10.153Z DEBUG   plugin-cln-grpc: Generating a new certificate for key "/home/remyers/github/lightning-cfg/.lightning/bob/regtest/ca-key.pem" at "/home/remyers/github/lightning-cfg/.lightning/bob/regtest/ca.pem"
+2025-05-23T12:09:10.153Z DEBUG   plugin-cln-grpc: Generating a new keypair in "/home/remyers/github/lightning-cfg/.lightning/bob/regtest/server-key.pem", it didn't exist
+2025-05-23T12:09:10.153Z DEBUG   plugin-cln-grpc: Generating a new certificate for key "/home/remyers/github/lightning-cfg/.lightning/bob/regtest/server-key.pem" at "/home/remyers/github/lightning-cfg/.lightning/bob/regtest/server.pem"
+2025-05-23T12:09:10.153Z DEBUG   plugin-cln-grpc: Generating a new keypair in "/home/remyers/github/lightning-cfg/.lightning/bob/regtest/client-key.pem", it didn't exist
+2025-05-23T12:09:10.153Z DEBUG   lightningd: Looking for [autoclean,paidinvoices,num]
+2025-05-23T12:09:10.153Z DEBUG   plugin-cln-grpc: Generating a new certificate for key "/home/remyers/github/lightning-cfg/.lightning/bob/regtest/client-key.pem" at "/home/remyers/github/lightning-cfg/.lightning/bob/regtest/client.pem"
+2025-05-23T12:09:10.154Z INFO    plugin-cln-grpc: Connecting to "lightning-rpc" and serving grpc on 127.0.0.1:9736
+2025-05-23T12:09:10.154Z DEBUG   plugin-bookkeeper: Setting up database at sqlite3://accounts.sqlite3
+2025-05-23T12:09:10.154Z INFO    plugin-bookkeeper: Creating database
+2025-05-23T12:09:10.157Z DEBUG   lightningd: Looking for [autoclean,expiredinvoices,num]
+2025-05-23T12:09:10.158Z DEBUG   hsmd: Client: Received message 27 from client
+2025-05-23T12:09:10.158Z DEBUG   hsmd: Client: Received message 27 from client
+2025-05-23T12:09:10.158Z DEBUG   hsmd: Client: Received message 27 from client
+2025-05-23T12:09:10.158Z DEBUG   connectd: REPLY WIRE_CONNECTD_ACTIVATE_REPLY with 0 fds
+2025-05-23T12:09:10.158Z DEBUG   lightningd: io_break: connect_activate_done
+2025-05-23T12:09:10.159Z DEBUG   lightningd: io_loop: connectd_activate
+2025-05-23T12:09:10.159Z INFO    lightningd: --------------------------------------------------
+2025-05-23T12:09:10.159Z INFO    lightningd: Server started with public key 03837ac1dd5393ee054b54fb820112502fecb49894781ca00eb8161a398a8e2777, alias bob (color #03837a) and lightningd v25.02-301-gcca076b
+2025-05-23T12:09:10.167Z DEBUG   lightningd: Adding block 121: 57387ffe74152473edf6d29e20168d9f511ca40536b960a407563f727b9a8306
+2025-05-23T12:09:10.174Z DEBUG   lightningd: Adding block 122: 12087b36869507c7a4d9cdee8521c08ed614b89bc293bd1bc62ebdae1132aa72
+2025-05-23T12:09:10.179Z DEBUG   lightningd: Adding block 123: 77a338b274af7b441f21923471acec311470b624c8c25bea78e3592dbb1dd69b
+2025-05-23T12:09:10.185Z DEBUG   lightningd: Adding block 124: 11cdff1cdbe5c278c61347e3c3df2ddf1e9b0fe29c6f3005a51799aed3f65c8f
+2025-05-23T12:09:10.191Z DEBUG   lightningd: Adding block 125: 0b4c24c32978ca1cb07d6ea2c0beb0166d326e2b8eec5368804b9aabca381334
+2025-05-23T12:09:10.198Z DEBUG   lightningd: Adding block 126: 18162f6bf61112f79ea5257971c1d293d6d88d5e81423ffe53abc81fd869819c
+2025-05-23T12:09:10.204Z DEBUG   lightningd: Adding block 127: 74538ab2d64a629d2dc69918595e4b5dd166118ea302fec0171fa2c0a55411e4
+2025-05-23T12:09:10.210Z DEBUG   lightningd: Adding block 128: 6dcba4b807274d24967f3d1fe9504cc9737f55558e83ffcdb110587fdb150def
+2025-05-23T12:09:10.216Z DEBUG   lightningd: Adding block 129: 085a00d9946dcbe1a9fd83c2a1d06ac5b441ea4d6566d373cdf3d86649ac835d
+2025-05-23T12:09:10.222Z DEBUG   lightningd: Adding block 130: 56ad485db258c399bf8861c4dc211f72c0afd97fbf46c9cde3cdc00794e439ab
+2025-05-23T12:09:10.228Z DEBUG   lightningd: Adding block 131: 74891d0917370359930c685abf152159d12769403e4fd1e76d7a75c1edb62338
+2025-05-23T12:09:10.234Z DEBUG   lightningd: Adding block 132: 1c4acc0f8820a14032029faff79a0843daacdf850b0757b0609c78ea3042ea94
+2025-05-23T12:09:10.240Z DEBUG   lightningd: Adding block 133: 6ba48789ed486e8ab3def4e182968e33e711d2fc3078c535d267fa2add641eec
+2025-05-23T12:09:10.246Z DEBUG   lightningd: Adding block 134: 4e1db3d201e870631b34ba673740ed8b5d8ad6ea63a213302ba05ad51a30cf6e
+2025-05-23T12:09:10.253Z DEBUG   lightningd: Adding block 135: 75644038f1b60d0725c41af00eb6251124c271dfcee7c45bb07223c008fc3588
+2025-05-23T12:09:10.259Z DEBUG   lightningd: Adding block 136: 28d4dbe6443a8f934579422d2e64aef111ad6e8eb7ad3b481ba20db66ce25599
+2025-05-23T12:09:10.265Z DEBUG   lightningd: Adding block 137: 354a5d1f7cd60cd94f89dfcde6b04fdf0ba222edac586cba9b2fcf1fd43c709f
+2025-05-23T12:09:10.272Z DEBUG   lightningd: Adding block 138: 7051d06c41c6a50763a02206ac3092f5c42436200ff4a7689c1dc29435b81bee
+2025-05-23T12:09:10.278Z DEBUG   lightningd: Adding block 139: 442959a933b979e282b7fe26169413ac67786ac7f18f2bd0bb6de2e1107da73e
+2025-05-23T12:09:10.285Z DEBUG   lightningd: Adding block 140: 1c44de16bb1918a02873e5ff7ff86cb6ce47d98cd950dd0f91311a468c93e31b
+2025-05-23T12:09:10.291Z DEBUG   lightningd: Adding block 141: 7f45670d8a287ac88c9353072cc5d1d94afb5915c9ac231a3c9f93457d3eb2e7
+2025-05-23T12:09:10.298Z DEBUG   lightningd: Adding block 142: 0670ee266d908a8f3bbdad84f57388ea6a6f3a94c5abba691b176a72a08e74cd
+2025-05-23T12:09:10.304Z DEBUG   lightningd: Adding block 143: 44c264a9f74a71ea6a51ac8902cbd7b411fbe538e729b7c9867be4a514c0d022
+2025-05-23T12:09:10.310Z DEBUG   lightningd: Adding block 144: 0cc492a6244df392881fe5a3b9f62aff55056ab7135429c9d409f93656e9f4be
+2025-05-23T12:09:10.317Z DEBUG   lightningd: Adding block 145: 3c2de5c544ebd5647b3b8be4bd8f9c28b289397dd699d2b5f90a0605580e7aa6
+2025-05-23T12:09:10.323Z DEBUG   lightningd: Adding block 146: 65b50987e913cb83ea416804524f34911a36725307c7f67f10802ec71c1ec0ef
+2025-05-23T12:09:10.329Z DEBUG   lightningd: Adding block 147: 5a7ac90ccf99864e9971464ff4cc1e9f254a508ff88291327e3a53203855f3d2
+2025-05-23T12:09:10.336Z DEBUG   lightningd: Adding block 148: 599d818f69849da812d70baeea400c52ab0452b366ba08b9a4edcc746c8702f8
+2025-05-23T12:09:10.343Z DEBUG   lightningd: Adding block 149: 6c91d1c0ef2ad28bc8c1c107493f4ff6fdffd036d1264b8cdf3a4ce27e4203b6
+2025-05-23T12:09:10.349Z DEBUG   lightningd: Adding block 150: 201745fdd34c31b8e27deac14f4890fb827f999b2df396e4173d6cbad35eedc8
+2025-05-23T12:09:10.355Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_NEW_BLOCKHEIGHT_REPLY with 0 fds
+2025-05-23T12:09:10.357Z DEBUG   plugin-bookkeeper: account wallet has balance 0msat
+2025-05-23T12:09:10.357Z INFO    plugin-bookkeeper: account wallet not found, adding
+2025-05-23T12:09:10.357Z DEBUG   plugin-bookkeeper: Snapshot balances updated
+2025-05-23T12:09:15.152Z DEBUG   gossipd: seeker: no peers, waiting
+2025-05-23T12:09:20.156Z DEBUG   gossipd: seeker: no peers, waiting
+2025-05-23T12:09:20.157Z DEBUG   gossipd: seeker: need more peers for gossip (have 0)
+2025-05-23T12:09:20.157Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:09:20.159Z DEBUG   lightningd: channel_gossip: no longer in startup mode
+2025-05-23T12:09:24.841Z DEBUG   hsmd: Client: Received message 28 from client
+2025-05-23T12:09:24.956Z DEBUG   03837ac1dd5393ee054b54fb820112502fecb49894781ca00eb8161a398a8e2777-hsmd: Got WIRE_HSMD_ECDH_REQ
+2025-05-23T12:09:24.956Z DEBUG   hsmd: Client: Received message 1 from client
+2025-05-23T12:09:24.963Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Connect IN
+2025-05-23T12:09:24.963Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_INIT
+2025-05-23T12:09:24.980Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_in WIRE_INIT
+2025-05-23T12:09:24.980Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Handed peer, entering loop
+2025-05-23T12:09:24.980Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: seeker: chosen as startup peer
+2025-05-23T12:09:24.980Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: seeker: starting gossip (EVERYTHING)
+2025-05-23T12:09:24.980Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_GOSSIP_TIMESTAMP_FILTER
+2025-05-23T12:09:25.000Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_in UNKNOWN 39409
+2025-05-23T12:09:25.088Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Activating for message WIRE_OPEN_CHANNEL2
+2025-05-23T12:09:25.090Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: pid 1479449, msgfd 87
+2025-05-23T12:09:25.090Z DEBUG   hsmd: Client: Received message 30 from client
+2025-05-23T12:09:25.090Z DEBUG   hsmd: Client: Received message 10 from client
+2025-05-23T12:09:25.090Z DEBUG   hsmd: new_client: 1
+2025-05-23T12:09:25.091Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:09:25.091Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:09:25.091Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:09:25.091Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:09:25.091Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_in WIRE_OPEN_CHANNEL2
+2025-05-23T12:09:25.091Z DEBUG   plugin-funder: Policy match (100%) returned funding amount of 0sat. Reserve tank too low. available_funds 0sat, reserve_tank requires 0sat
+2025-05-23T12:09:25.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_out WIRE_ACCEPT_CHANNEL2
+2025-05-23T12:09:25.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: billboard: channel open: accept sent, waiting for reply
+2025-05-23T12:09:25.111Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_in WIRE_GOSSIP_TIMESTAMP_FILTER
+2025-05-23T12:09:25.310Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_in WIRE_TX_ADD_INPUT
+2025-05-23T12:09:25.310Z DEBUG   plugin-funder: openchannel_changed PSBT is cHNidP8BAgQCAAAAAQMElgAAAAEEAQEBBQEAAQYBAwH7BAIAAAAAAQCDAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////8CVQD/////AgDyBSoBAAAAFgAUJGR0mXMwDUVvcVjG5Ba4U91N4cAAAAAAAAAAACZqJKohqe3i9hw/cdHe/T+pmd+jaVN1XGkGiXmZYrSL69g2l06M+QAAAAABDiCX+yCYtMvc7vp1nHcDF+4Q2FmtVNIRXfKPTYGNqizRxAEPBAAAAAABEAT9////DPwJbGlnaHRuaW5nAQgAAAAAAAAAAAA=
+2025-05-23T12:09:25.310Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:09:25.314Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_in WIRE_TX_ADD_OUTPUT
+2025-05-23T12:09:25.314Z DEBUG   plugin-funder: openchannel_changed PSBT is cHNidP8BAgQCAAAAAQMElgAAAAEEAQEBBQEBAQYBAwH7BAIAAAAAAQCDAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////8CVQD/////AgDyBSoBAAAAFgAUJGR0mXMwDUVvcVjG5Ba4U91N4cAAAAAAAAAAACZqJKohqe3i9hw/cdHe/T+pmd+jaVN1XGkGiXmZYrSL69g2l06M+QAAAAABDiCX+yCYtMvc7vp1nHcDF+4Q2FmtVNIRXfKPTYGNqizRxAEPBAAAAAABEAT9////DPwJbGlnaHRuaW5nAQgAAAAAAAAAAAABAwggoQcAAAAAAAEEIgAgPP5K6b3zF3O2KT03Kt2gmiJNRRrviJAo4TNJjlbpUHAM/AlsaWdodG5pbmcBCAAAAAAAAAACAA==
+2025-05-23T12:09:25.314Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:09:25.317Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_in WIRE_TX_ADD_OUTPUT
+2025-05-23T12:09:25.317Z DEBUG   plugin-funder: openchannel_changed PSBT is cHNidP8BAgQCAAAAAQMElgAAAAEEAQEBBQECAQYBAwH7BAIAAAAAAQCDAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////8CVQD/////AgDyBSoBAAAAFgAUJGR0mXMwDUVvcVjG5Ba4U91N4cAAAAAAAAAAACZqJKohqe3i9hw/cdHe/T+pmd+jaVN1XGkGiXmZYrSL69g2l06M+QAAAAABDiCX+yCYtMvc7vp1nHcDF+4Q2FmtVNIRXfKPTYGNqizRxAEPBAAAAAABEAT9////DPwJbGlnaHRuaW5nAQgAAAAAAAAAAAABAwggoQcAAAAAAAEEIgAgPP5K6b3zF3O2KT03Kt2gmiJNRRrviJAo4TNJjlbpUHAM/AlsaWdodG5pbmcBCAAAAAAAAAACAAEDCDlQ/ikBAAAAAQQiUSB7HBNYBb4btteI0cFiQI9lMivyRYBPV5G4aAk0iy8zmwz8CWxpZ2h0bmluZwEIAAAAAAAAAAQA
+2025-05-23T12:09:25.317Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:09:25.321Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_in WIRE_TX_COMPLETE
+2025-05-23T12:09:25.321Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SETUP_CHANNEL
+2025-05-23T12:09:25.321Z DEBUG   hsmd: Client: Received message 31 from client
+2025-05-23T12:09:25.321Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: billboard: channel open: commitment ready to send, sending channel to lightningd to save
+2025-05-23T12:09:25.321Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Initial channel state CGOSSIP_WAITING_FOR_USABLE
+2025-05-23T12:09:25.321Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: State changed from DUALOPEND_OPEN_INIT to DUALOPEND_OPEN_COMMIT_READY
+2025-05-23T12:09:25.328Z DEBUG   hsmd: Client: Received message 28 from client
+2025-05-23T12:09:25.328Z DEBUG   plugin-cln-grpc: Failed to parse notification from lightningd Error("invalid type: null, expected a string", line: 0, column: 0)
+2025-05-23T12:09:25.329Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SIGN_REMOTE_COMMITMENT_TX
+2025-05-23T12:09:25.329Z DEBUG   hsmd: Client: Received message 19 from client
+2025-05-23T12:09:25.329Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: signature 304402204aa4bb3fed50c2b2390d5d62444794c99fe2fc6e522867ab9f78a733d440d67602200dc8319406d0b91da23e010439654a09b04d388579fcffc4d15a421b560726d701 on tx 020000000124d6d16cc2840b5eac9bc8461a1b955ea766fe85bb783aabf77fbb42e6afabd50000000000ffafcf80024a0100000000000022002037f57ed3c6c5e6165e41a86ee43a4d1396a4264a42edb4f60eab33bec3462728299d070000000000220020a804d80780c3523fb27990533dfc09d6cf986b89543bd29c9fb944c3f6e6a28a1f654c20 using key 02e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df07761
+2025-05-23T12:09:25.329Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_out WIRE_COMMITMENT_SIGNED
+2025-05-23T12:09:25.367Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_in WIRE_COMMITMENT_SIGNED
+2025-05-23T12:09:25.367Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_VALIDATE_COMMITMENT_TX
+2025-05-23T12:09:25.367Z DEBUG   hsmd: Client: Received message 35 from client
+2025-05-23T12:09:25.368Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: billboard: channel open: commitment received, sending to lightningd to save
+2025-05-23T12:09:25.368Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: State changed from DUALOPEND_OPEN_COMMIT_READY to DUALOPEND_OPEN_COMMITTED
+2025-05-23T12:09:25.370Z DEBUG   plugin-funder: nothing to sign for channel b8e453c3ea3873600ebdfaba36405aa4b077c63c7f45cd398f55521cb0935679
+2025-05-23T12:09:25.371Z DEBUG   plugin-cln-grpc: Failed to parse notification from lightningd Error("invalid type: null, expected a string", line: 0, column: 0)
+2025-05-23T12:09:25.371Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_out WIRE_TX_SIGNATURES
+2025-05-23T12:09:25.391Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_in WIRE_TX_SIGNATURES
+2025-05-23T12:09:25.392Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Broadcasting funding tx d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624 for channel b8e453c3ea3873600ebdfaba36405aa4b077c63c7f45cd398f55521cb0935679. 0200000000010197fb2098b4cbdceefa759c770317ee10d859ad54d2115df28f4d818daa2cd1c40000000000fdffffff0220a10700000000002200203cfe4ae9bdf31773b6293d372adda09a224d451aef889028e133498e56e950703950fe29010000002251207b1c135805be1bb6d788d1c162408f65322bf245804f5791b86809348b2f339b02473044022046116fdc54020048e42186f0f607aab0707f7a8ce5819f5a640b7b98a468ee1a0220321c74dcfe112a106df9456fff73bfba36ac7e8b3e9702b8a57f4fbe62f6d99101210387ac9cd16d706258455525b8300f1ee802d373344938583693f5ced9ca792c7696000000
+2025-05-23T12:09:25.392Z DEBUG   lightningd: sendrawtransaction: 0200000000010197fb2098b4cbdceefa759c770317ee10d859ad54d2115df28f4d818daa2cd1c40000000000fdffffff0220a10700000000002200203cfe4ae9bdf31773b6293d372adda09a224d451aef889028e133498e56e950703950fe29010000002251207b1c135805be1bb6d788d1c162408f65322bf245804f5791b86809348b2f339b02473044022046116fdc54020048e42186f0f607aab0707f7a8ce5819f5a640b7b98a468ee1a0220321c74dcfe112a106df9456fff73bfba36ac7e8b3e9702b8a57f4fbe62f6d99101210387ac9cd16d706258455525b8300f1ee802d373344938583693f5ced9ca792c7696000000
+2025-05-23T12:09:25.392Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: State changed from DUALOPEND_OPEN_COMMITTED to DUALOPEND_AWAITING_LOCKIN
+2025-05-23T12:09:25.395Z DEBUG   plugin-spenderp: mfc ??: `openchannel_peer_sigs` no pending dest found for channel_id b8e453c3ea3873600ebdfaba36405aa4b077c63c7f45cd398f55521cb0935679
+2025-05-23T12:09:25.395Z DEBUG   plugin-cln-grpc: Failed to parse notification from lightningd Error("invalid type: null, expected a string", line: 0, column: 0)
+2025-05-23T12:09:25.396Z DEBUG   plugin-chanbackup: Updating the SCB
+2025-05-23T12:09:25.396Z DEBUG   plugin-chanbackup: Updating the SCB file...
+2025-05-23T12:09:25.397Z DEBUG   plugin-bcli: sendrawtx exit 0 (bitcoin-cli -regtest -datadir=/home/remyers/github/lightning-cfg/.bitcoin -rpcclienttimeout=60 -rpcconnect=127.0.0.1 -rpcport=18888 -rpcuser=... -stdinrpcpass sendrawtransaction 0200000000010197fb2098b4cbdceefa759c770317ee10d859ad54d2115df28f4d818daa2cd1c40000000000fdffffff0220a10700000000002200203cfe4ae9bdf31773b6293d372adda09a224d451aef889028e133498e56e950703950fe29010000002251207b1c135805be1bb6d788d1c162408f65322bf245804f5791b86809348b2f339b02473044022046116fdc54020048e42186f0f607aab0707f7a8ce5819f5a640b7b98a468ee1a0220321c74dcfe112a106df9456fff73bfba36ac7e8b3e9702b8a57f4fbe62f6d99101210387ac9cd16d706258455525b8300f1ee802d373344938583693f5ced9ca792c7696000000) 
+2025-05-23T12:09:30.161Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: seeker: startup peer finished
+2025-05-23T12:09:30.161Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: seeker: state = PROBING_SCIDS Seeking scids 1 - 150
+2025-05-23T12:09:30.161Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: sending query_channel_range for blocks 1+150
+2025-05-23T12:09:30.161Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_QUERY_CHANNEL_RANGE
+2025-05-23T12:09:30.177Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: reply_channel_range 1+150 (of 1+150) 0 scids
+2025-05-23T12:09:30.177Z DEBUG   gossipd: seeker: state = NORMAL No unannounced nodes
+2025-05-23T12:09:35.164Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:09:35.164Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:09:37.625Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_in WIRE_CHANNEL_READY
+2025-05-23T12:09:37.625Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Got channel_ready
+2025-05-23T12:09:37.627Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: billboard: They've confirmed channel ready, we haven't yet.
+2025-05-23T12:09:40.168Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:09:40.168Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:09:40.401Z DEBUG   lightningd: Adding block 151: 17ad635f2ba146bbfd1e88e74d4d9bc1aa27c52d1e121db1b5e174d8ac63a7bc
+2025-05-23T12:09:40.401Z DEBUG   wallet: Owning output 0 100000000sat (p2wpkh) txid 9ebebcb2ed8867a89698d762ef239399b7f1ed6f3dcc24a76cb9375d60a38276 CONFIRMED
+2025-05-23T12:09:40.407Z DEBUG   plugin-bookkeeper: coin_move 2 (deposit) 100000000000msat -0msat chain_mvt 1748002180
+2025-05-23T12:09:40.415Z DEBUG   lightningd: Adding block 152: 3f46f593742e5011619ceac5d09170d4c397feec417c09c96210da1784da0823
+2025-05-23T12:09:40.426Z DEBUG   lightningd: Adding block 153: 03b5ebc09c9face9836bcf9bfe7de525834827099d980107f44df7d9c7736b37
+2025-05-23T12:09:40.437Z DEBUG   lightningd: Adding block 154: 0d5ad7f47095e6cab0af4289838e59bb1d925983be1306fec55c1c437cd56115
+2025-05-23T12:09:40.448Z DEBUG   lightningd: Adding block 155: 5a21db98f02e0eb0376707a78359e8603461d62fb12bdec4c3fea9cc8440f993
+2025-05-23T12:09:40.460Z DEBUG   lightningd: Adding block 156: 731f1051651693417cc1f35f0f090af68e2ee754026f146d7895f19afce3a642
+2025-05-23T12:09:40.471Z DEBUG   lightningd: Adding block 157: 72eff0e8b9865b8ba999ada9d282e83512939658ea18e11fa06d654c8e5c8782
+2025-05-23T12:09:40.481Z DEBUG   lightningd: Adding block 158: 48c3618169ddb2018b76946e92652cde2df3e34c3f07db453d5952b417e32e9b
+2025-05-23T12:09:40.490Z DEBUG   lightningd: Adding block 159: 752477403b78be96daf0a9f43a70321b2871edea9143289adb6fa30b78956bdd
+2025-05-23T12:09:40.496Z DEBUG   lightningd: Got first depth change 0->9 for d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624
+2025-05-23T12:09:40.497Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Funding tx d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624 confirmed, telling peer
+2025-05-23T12:09:40.499Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_NEW_BLOCKHEIGHT_REPLY with 0 fds
+2025-05-23T12:09:40.501Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:09:40.501Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:09:40.501Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_CHECK_OUTPOINT
+2025-05-23T12:09:40.501Z DEBUG   hsmd: Client: Received message 32 from client
+2025-05-23T12:09:40.501Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_LOCK_OUTPOINT
+2025-05-23T12:09:40.501Z DEBUG   hsmd: Client: Received message 37 from client
+2025-05-23T12:09:40.501Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: peer_out WIRE_CHANNEL_READY
+2025-05-23T12:09:40.501Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: billboard: Channel ready for use.
+2025-05-23T12:09:40.501Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: State changed from DUALOPEND_AWAITING_LOCKIN to CHANNELD_NORMAL
+2025-05-23T12:09:40.502Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: gossip state: CGOSSIP_WAITING_FOR_USABLE->CGOSSIP_WAITING_FOR_MATCHING_PEER_SIGS (Channel mined, but we haven't got matching announcment sigs from peer)
+2025-05-23T12:09:40.502Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: channel_gossip: not sending channel_announcement_sigs until reestablished
+2025-05-23T12:09:40.503Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Watching for funding txid: d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624
+2025-05-23T12:09:40.506Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: pid 1479531, msgfd 88
+2025-05-23T12:09:40.506Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-dualopend-chan#1: Status closed, but not exited. Killing
+2025-05-23T12:09:40.507Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Already have funding locked in
+2025-05-23T12:09:40.507Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Ignoring fee limits!
+2025-05-23T12:09:40.507Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: channel_gossip: reestablished
+2025-05-23T12:09:40.511Z DEBUG   hsmd: Client: Received message 3 from client
+2025-05-23T12:09:40.511Z DEBUG   hsmd: new_client: 1
+2025-05-23T12:09:40.511Z DEBUG   hsmd: Client: Received message 4 from client
+2025-05-23T12:09:40.511Z DEBUG   hsmd: Client: Received message 3 from client
+2025-05-23T12:09:40.512Z DEBUG   plugin-funder: Cleaning up datastore for channel_id b8e453c3ea3873600ebdfaba36405aa4b077c63c7f45cd398f55521cb0935679
+2025-05-23T12:09:40.512Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Initializing important peer with 0 addresses
+2025-05-23T12:09:40.512Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_ANNOUNCEMENT_SIGNATURES
+2025-05-23T12:09:40.512Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: option_static_remotekey = 1, option_anchor_outputs = 0 option_anchors_zero_fee_htlc_tx = 1
+2025-05-23T12:09:40.512Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: init REMOTE: remote_per_commit = 020720b27c248e4890543aacd102c98ef2b6b498a196175cfb94eb91a898d99119, old_remote_per_commit = 0304c3552befb00854381869e23682649b4602fe93816aa8d961206fac55b6012c next_idx_local = 1 next_idx_remote = 1 revocations_received = 0 feerates { RCVD_ADD_ACK_REVOCATION:316 } range 1-4294967295 blockheights { RCVD_ADD_ACK_REVOCATION:0 }, our current 159
+2025-05-23T12:09:40.513Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:09:40.513Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:09:40.513Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Channel ready for use.
+2025-05-23T12:09:40.513Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Channel ready for use.
+2025-05-23T12:09:40.514Z DEBUG   plugin-bookkeeper: coin_move 2 (channel_open) 0msat -0msat chain_mvt 1748002180
+2025-05-23T12:09:40.526Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_ANNOUNCEMENT_SIGNATURES
+2025-05-23T12:09:40.526Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: channel_gossip: received announcement sigs for 151x1x0 (we have 151x1x0)
+2025-05-23T12:09:40.526Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: gossip state: CGOSSIP_WAITING_FOR_MATCHING_PEER_SIGS->CGOSSIP_ANNOUNCED (Got peer announcement signatures after already at 6 confirmations)
+2025-05-23T12:09:40.530Z DEBUG   hsmd: Client: Received message 4 from client
+2025-05-23T12:09:40.530Z DEBUG   hsmd: Client: Received message 3 from client
+2025-05-23T12:09:40.530Z DEBUG   hsmd: Client: Received message 6 from client
+2025-05-23T12:09:40.530Z DEBUG   lightningd: updating channel 6433732x13372267x2389 with inbound settings
+2025-05-23T12:09:40.533Z DEBUG   gossipd: inject_gossip: WIRE_CHANNEL_ANNOUNCEMENT
+2025-05-23T12:09:40.533Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_ADDGOSSIP_REPLY with 0 fds
+2025-05-23T12:09:40.533Z DEBUG   gossipd: inject_gossip: WIRE_CHANNEL_UPDATE
+2025-05-23T12:09:40.533Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_ADDGOSSIP_REPLY with 0 fds
+2025-05-23T12:09:40.533Z DEBUG   gossipd: inject_gossip: WIRE_NODE_ANNOUNCEMENT
+2025-05-23T12:09:40.533Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_ADDGOSSIP_REPLY with 0 fds
+2025-05-23T12:09:45.173Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:09:45.173Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:09:50.176Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:09:50.176Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:09:54.984Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: seeker: chosen for periodic full sync
+2025-05-23T12:09:54.985Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: seeker: starting gossip (EVERYTHING)
+2025-05-23T12:09:54.985Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_GOSSIP_TIMESTAMP_FILTER
+2025-05-23T12:09:55.176Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:09:55.176Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:09:55.916Z DEBUG   hsmd: Client: Received message 28 from client
+2025-05-23T12:09:55.917Z DEBUG   lightningd: routehint: {"jsonrpc":"2.0","id":"cli:invoice#1479651/cln:listincoming#191","result":{"incoming":[{"id":"02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179","short_channel_id":"151x1x0","fee_base_msat":1000,"htlc_min_msat":0,"htlc_max_msat":225050624,"fee_proportional_millionths":200,"cltv_expiry_delta":144,"incoming_capacity_msat":0,"public":true,"enabled":true}]}}
+2025-05-23T12:09:55.917Z DEBUG   lightningd: 151x1x0: deadend
+2025-05-23T12:09:55.917Z DEBUG   lightningd: needed = 50000000msat, avail_capacity = 0msat, private_capacity = 0msat, offline_capacity = 0msat, deadend_capacity = 225050624msat
+2025-05-23T12:09:55.919Z DEBUG   hsmd: Client: Received message 8 from client
+2025-05-23T12:09:56.024Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_UPDATE_ADD_HTLC
+2025-05-23T12:09:56.024Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: NEW:: HTLC REMOTE 0 = RCVD_ADD_HTLC/SENT_ADD_HTLC 
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_COMMITMENT_SIGNED
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: fromwire_commitment_signed(0x621f858597e8) primary
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: msg_batch[0]: 0x621f858597e8
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sorting the msg_batch of tal_count 1, batch_size: 1
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: handle_peer_commit_sig(splice: 0, remote_splice: 0, commit_index: 0, local_index: 1, msg: 0x621f858597e8)
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Received commit
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc 0: RCVD_ADD_HTLC->RCVD_ADD_COMMIT
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc added LOCAL: local 0 remote 500000000
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: -> local 0 remote 450000000
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: rcvd_commit: HTLC REMOTE 0 = RCVD_ADD_COMMIT/SENT_ADD_COMMIT 
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Feerates are 316/316
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Committed 1, removing 0, adding 0
+2025-05-23T12:09:56.038Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: We need 6069sat at feerate 316 for 1 untrimmed htlcs: we have 450000000msat/500000000msat (will have 450000000msat)
+2025-05-23T12:09:56.039Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Derived key 02528ad8848c31fd33ad92fe07d205bcb767ba37804302eb907e5d7bb501124b2d from basepoint 0255c2d488332f39ebb1259ec0df082334ad68e4fea6a0ad2b17825f20f6eb6000, point 03d9a6084a9e20aaef5f8c82f5e93d906a97af4414a13587af6c76cc45a7760f3c
+2025-05-23T12:09:56.039Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Received commit_sig with 1 htlc sigs
+2025-05-23T12:09:56.039Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_VALIDATE_COMMITMENT_TX
+2025-05-23T12:09:56.039Z DEBUG   hsmd: Client: Received message 35 from client
+2025-05-23T12:09:56.039Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending revoke_and_ack
+2025-05-23T12:09:56.039Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc 0: RCVD_ADD_COMMIT->SENT_ADD_REVOCATION
+2025-05-23T12:09:56.039Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: sending_revoke_and_ack: HTLC REMOTE 0 = SENT_ADD_REVOCATION/RCVD_ADD_REVOCATION 
+2025-05-23T12:09:56.039Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: revoke_and_ack made pending: commit timer
+2025-05-23T12:09:56.039Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending master 1021
+2025-05-23T12:09:56.039Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: got commitsig 1: feerate 316, blockheight: 0, 1 added, 0 fulfilled, 0 failed, 0 changed. 0 splice commitments.
+2025-05-23T12:09:56.040Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Adding their HTLC 0
+2025-05-23T12:09:56.040Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: HTLC in 0 RCVD_ADD_COMMIT->SENT_ADD_REVOCATION
+2025-05-23T12:09:56.042Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: ... , awaiting 1121
+2025-05-23T12:09:56.042Z DEBUG   hsmd: Client: Received message 1 from client
+2025-05-23T12:09:56.042Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got it!
+2025-05-23T12:09:56.042Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_REVOKE_COMMITMENT_TX
+2025-05-23T12:09:56.042Z DEBUG   hsmd: Client: Received message 40 from client
+2025-05-23T12:09:56.042Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_REVOKE_AND_ACK
+2025-05-23T12:09:56.049Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Trying commit
+2025-05-23T12:09:56.049Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc 0: SENT_ADD_REVOCATION->SENT_ADD_ACK_COMMIT
+2025-05-23T12:09:56.049Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc added REMOTE: local 0 remote 500000000
+2025-05-23T12:09:56.049Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: -> local 0 remote 450000000
+2025-05-23T12:09:56.049Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: sending_commit: HTLC REMOTE 0 = SENT_ADD_ACK_COMMIT/RCVD_ADD_ACK_COMMIT 
+2025-05-23T12:09:56.049Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: send_commit_part(splice: 0, remote_splice: 0, index: 1)
+2025-05-23T12:09:56.050Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SIGN_REMOTE_COMMITMENT_TX
+2025-05-23T12:09:56.050Z DEBUG   hsmd: Client: Received message 19 from client
+2025-05-23T12:09:56.050Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Creating commit_sig signature 1 304402203994fa98d8cc6f4c2dc3581edd5a290bf0e49075216d54f18eb14b2cf8c1613d0220114ded45357c2aa22fc1feef5a78eadca7caf1abe2ff4e7e8a45aacf111fed9101 for tx 020000000124d6d16cc2840b5eac9bc8461a1b955ea766fe85bb783aabf77fbb42e6afabd50000000000ffafcf80044a0100000000000022002037f57ed3c6c5e6165e41a86ee43a4d1396a4264a42edb4f60eab33bec34627284a01000000000000220020766e558ef9821a44b82d87a877fdacfe8f27c8c3066132d1df93a21f5db35aaf50c30000000000002200206629c96e56ba1058a0134d1c21ac07da4bc4945075c196d1d21ced8f603ed085a3d9060000000000220020154b6d361cb4684192896278a5ee3e4760eff09c72026ee05b599c23ac427ad01e654c20 wscript 522102e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df0776121031457009d42038ef5773edd940348a2b74a1b56f002a7f736b712612824c5247152ae key 02e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df07761
+2025-05-23T12:09:56.051Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SIGN_REMOTE_HTLC_TX
+2025-05-23T12:09:56.051Z DEBUG   hsmd: Client: Received message 20 from client
+2025-05-23T12:09:56.051Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Creating HTLC signature 30440220631c4ecd816eafecd58b34f6b3984cb76c1a5c62e33ef5c5a99927ac39d1b58202205fc50db7aafa9dd6eb5aed2be250e0a178e8a53da030dc6233b5d8900a4d8f2483 for tx 0200000001cf753a071b24e93ffbd31e0d9989b93ce445a074b29e2c6a54f854e1043de7760200000000010000000150c3000000000000220020154b6d361cb4684192896278a5ee3e4760eff09c72026ee05b599c23ac427ad0ca010000 wscript 76a914eeba51a00f333aacd797c110056d25d6db6d1c218763ac672103c865e0cae9e8208e415d55bbdf13afed8ebc895447bdd13952143cd2f1a38c677c820120876475527c2103a485afe63dad219f686fbcc6b00ed2da1694e37fe6807389a761586798b35cdf52ae67a91487dcd1cd18f46e4d334e26f6b8d872d6a37436e188ac6851b27568 key 03c865e0cae9e8208e415d55bbdf13afed8ebc895447bdd13952143cd2f1a38c67
+2025-05-23T12:09:56.051Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Telling master we're about to commit...
+2025-05-23T12:09:56.051Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending master 1020
+2025-05-23T12:09:56.051Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: HTLC in 0 SENT_ADD_REVOCATION->SENT_ADD_ACK_COMMIT
+2025-05-23T12:09:56.053Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: ... , awaiting 1120
+2025-05-23T12:09:56.053Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got it!
+2025-05-23T12:09:56.053Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending commit_sig with 1 htlc sigs
+2025-05-23T12:09:56.055Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_COMMITMENT_SIGNED
+2025-05-23T12:09:56.063Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Can't send commit: waiting for revoke_and_ack
+2025-05-23T12:09:56.064Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_REVOKE_AND_ACK
+2025-05-23T12:09:56.064Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_VALIDATE_REVOCATION
+2025-05-23T12:09:56.064Z DEBUG   hsmd: Client: Received message 36 from client
+2025-05-23T12:09:56.064Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Received revoke_and_ack
+2025-05-23T12:09:56.064Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc 0: SENT_ADD_ACK_COMMIT->RCVD_ADD_ACK_REVOCATION
+2025-05-23T12:09:56.064Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: rcvd_revoke_and_ack: HTLC REMOTE 0 = RCVD_ADD_ACK_REVOCATION/SENT_ADD_ACK_REVOCATION 
+2025-05-23T12:09:56.064Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: No commits outstanding after recv revoke_and_ack
+2025-05-23T12:09:56.064Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: HTLC 0[REMOTE] => RCVD_ADD_ACK_REVOCATION
+2025-05-23T12:09:56.065Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SIGN_PENALTY_TO_US
+2025-05-23T12:09:56.065Z DEBUG   hsmd: Client: Received message 14 from client
+2025-05-23T12:09:56.065Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending master 1022
+2025-05-23T12:09:56.065Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: got revoke 0: 1 changed
+2025-05-23T12:09:56.065Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: HTLC in 0 SENT_ADD_ACK_COMMIT->RCVD_ADD_ACK_REVOCATION
+2025-05-23T12:09:56.071Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: ... , awaiting 1122
+2025-05-23T12:09:56.071Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got it!
+2025-05-23T12:09:56.071Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: revoke_and_ack REMOTE: remote_per_commit = 03b790cae42b31fda926498021b0787185343030b9e7adb922b3c319d2ed6e505c, old_remote_per_commit = 020720b27c248e4890543aacd102c98ef2b6b498a196175cfb94eb91a898d99119
+2025-05-23T12:09:56.071Z DEBUG   plugin-chanbackup: Updated `emergency.recover` state after receiving new commitment secret.
+2025-05-23T12:09:56.071Z DEBUG   lightningd: HTLC set contains 1 HTLCs, for a total of 50000000msat out of 50000000msat (payment_secret)
+2025-05-23T12:09:56.071Z INFO    lightningd: Resolved invoice 'test1' with amount 50000000msat in 1 htlcs
+2025-05-23T12:09:56.071Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: HTLC in 0 RCVD_ADD_ACK_REVOCATION->SENT_REMOVE_HTLC
+2025-05-23T12:09:56.073Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: FULFILL:: HTLC REMOTE 0 = SENT_REMOVE_HTLC/RCVD_REMOVE_HTLC FULFILLED
+2025-05-23T12:09:56.073Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_UPDATE_FULFILL_HTLC
+2025-05-23T12:09:56.073Z DEBUG   plugin-chanbackup: Updating the SCB
+2025-05-23T12:09:56.073Z DEBUG   plugin-chanbackup: Updating the SCB file...
+2025-05-23T12:09:56.081Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Trying commit
+2025-05-23T12:09:56.081Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc 0: SENT_REMOVE_HTLC->SENT_REMOVE_COMMIT
+2025-05-23T12:09:56.081Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc added REMOTE: local 0 remote 450000000
+2025-05-23T12:09:56.081Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: -> local 50000000 remote 450000000
+2025-05-23T12:09:56.081Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: sending_commit: HTLC REMOTE 0 = SENT_REMOVE_COMMIT/RCVD_REMOVE_COMMIT FULFILLED
+2025-05-23T12:09:56.081Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: send_commit_part(splice: 0, remote_splice: 0, index: 2)
+2025-05-23T12:09:56.081Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SIGN_REMOTE_COMMITMENT_TX
+2025-05-23T12:09:56.081Z DEBUG   hsmd: Client: Received message 19 from client
+2025-05-23T12:09:56.082Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Creating commit_sig signature 2 304402200ab5e6c646c5c0f73b118dadadea61214e1d880ef476142fb2d234f6ecfb88ee022002e67298b1cd8ff03d6bce280314cabba9b01045197ee7290f51dba17ea1a49f01 for tx 020000000124d6d16cc2840b5eac9bc8461a1b955ea766fe85bb783aabf77fbb42e6afabd50000000000ffafcf80044a0100000000000022002037f57ed3c6c5e6165e41a86ee43a4d1396a4264a42edb4f60eab33bec34627284a01000000000000220020766e558ef9821a44b82d87a877fdacfe8f27c8c3066132d1df93a21f5db35aaf50c30000000000002200207b83ba2da612a6ee26549fd2ffacc199c33984e36fe61332c9927f6c72c1bdaed9d90600000000002200205214a59f48edb0694f92de5183b67c32b6b612f458c77615592ec02f9923fd7a1d654c20 wscript 522102e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df0776121031457009d42038ef5773edd940348a2b74a1b56f002a7f736b712612824c5247152ae key 02e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df07761
+2025-05-23T12:09:56.082Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Telling master we're about to commit...
+2025-05-23T12:09:56.082Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending master 1020
+2025-05-23T12:09:56.082Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: HTLC in 0 SENT_REMOVE_HTLC->SENT_REMOVE_COMMIT
+2025-05-23T12:09:56.084Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: ... , awaiting 1120
+2025-05-23T12:09:56.084Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got it!
+2025-05-23T12:09:56.084Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending commit_sig with 0 htlc sigs
+2025-05-23T12:09:56.085Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_COMMITMENT_SIGNED
+2025-05-23T12:09:56.094Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Can't send commit: waiting for revoke_and_ack
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_REVOKE_AND_ACK
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_VALIDATE_REVOCATION
+2025-05-23T12:09:56.095Z DEBUG   hsmd: Client: Received message 36 from client
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Received revoke_and_ack
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc 0: SENT_REMOVE_COMMIT->RCVD_REMOVE_REVOCATION
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: rcvd_revoke_and_ack: HTLC REMOTE 0 = RCVD_REMOVE_REVOCATION/SENT_REMOVE_REVOCATION FULFILLED
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Commits outstanding after recv revoke_and_ack
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: HTLC 0[REMOTE] => RCVD_REMOVE_REVOCATION
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SIGN_PENALTY_TO_US
+2025-05-23T12:09:56.095Z DEBUG   hsmd: Client: Received message 14 from client
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending master 1022
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: got revoke 1: 1 changed
+2025-05-23T12:09:56.095Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: HTLC in 0 SENT_REMOVE_COMMIT->RCVD_REMOVE_REVOCATION
+2025-05-23T12:09:56.098Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: ... , awaiting 1122
+2025-05-23T12:09:56.098Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got it!
+2025-05-23T12:09:56.098Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: revoke_and_ack REMOTE: remote_per_commit = 03aa787790adc1514762e4268d5d9991e2b082b744a6342d1c66fc635dad4d9bc9, old_remote_per_commit = 03b790cae42b31fda926498021b0787185343030b9e7adb922b3c319d2ed6e505c
+2025-05-23T12:09:56.098Z DEBUG   plugin-chanbackup: Updated `emergency.recover` state after receiving new commitment secret.
+2025-05-23T12:09:56.099Z DEBUG   plugin-chanbackup: Updating the SCB
+2025-05-23T12:09:56.099Z DEBUG   plugin-chanbackup: Updating the SCB file...
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_COMMITMENT_SIGNED
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: fromwire_commitment_signed(0x621f8585af78) primary
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: msg_batch[0]: 0x621f8585af78
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sorting the msg_batch of tal_count 1, batch_size: 1
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: handle_peer_commit_sig(splice: 0, remote_splice: 0, commit_index: 0, local_index: 2, msg: 0x621f8585af78)
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Received commit
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc 0: RCVD_REMOVE_REVOCATION->RCVD_REMOVE_ACK_COMMIT
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc added LOCAL: local 0 remote 450000000
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: -> local 50000000 remote 450000000
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: rcvd_commit: HTLC REMOTE 0 = RCVD_REMOVE_ACK_COMMIT/SENT_REMOVE_ACK_COMMIT FULFILLED
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Feerates are 316/316
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Committed 0, removing 0, adding 0
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: We need 6015sat at feerate 316 for 0 untrimmed htlcs: we have 450000000msat/450000000msat (will have 450000000msat)
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Derived key 03d11d9a335a1670be0d05e2cb7dce2e0946e4fa59b98da885e4d7e0473700abba from basepoint 0255c2d488332f39ebb1259ec0df082334ad68e4fea6a0ad2b17825f20f6eb6000, point 0379888727623fda9f0a77de5fb3bf0dae011d0571c1f9ee8eee345ac210de652f
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Received commit_sig with 0 htlc sigs
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_VALIDATE_COMMITMENT_TX
+2025-05-23T12:09:56.101Z DEBUG   hsmd: Client: Received message 35 from client
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending revoke_and_ack
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: htlc 0: RCVD_REMOVE_ACK_COMMIT->SENT_REMOVE_ACK_REVOCATION
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: sending_revoke_and_ack: HTLC REMOTE 0 = SENT_REMOVE_ACK_REVOCATION/RCVD_REMOVE_ACK_REVOCATION FULFILLED
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending master 1021
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: got commitsig 2: feerate 316, blockheight: 0, 0 added, 0 fulfilled, 0 failed, 1 changed. 0 splice commitments.
+2025-05-23T12:09:56.101Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: HTLC in 0 RCVD_REMOVE_REVOCATION->RCVD_REMOVE_ACK_COMMIT
+2025-05-23T12:09:56.102Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: HTLC in 0 RCVD_REMOVE_ACK_COMMIT->SENT_REMOVE_ACK_REVOCATION
+2025-05-23T12:09:56.102Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Removing in HTLC 0 state SENT_REMOVE_ACK_REVOCATION FULFILLED
+2025-05-23T12:09:56.102Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Balance 0msat -> 50000000msat
+2025-05-23T12:09:56.103Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: ... , awaiting 1121
+2025-05-23T12:09:56.103Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got it!
+2025-05-23T12:09:56.104Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_REVOKE_COMMITMENT_TX
+2025-05-23T12:09:56.104Z DEBUG   hsmd: Client: Received message 40 from client
+2025-05-23T12:09:56.104Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_REVOKE_AND_ACK
+2025-05-23T12:09:56.104Z DEBUG   plugin-bookkeeper: coin_move 2 (invoice) 50000000msat -0msat channel_mvt 1748002196
+2025-05-23T12:09:56.108Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Trying commit
+2025-05-23T12:09:56.108Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Can't send commit: nothing to send, feechange not wanted ({ RCVD_ADD_ACK_REVOCATION:316 }) blockheight not wanted ({ RCVD_ADD_ACK_REVOCATION:0 })
+2025-05-23T12:10:00.180Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:00.180Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:05.184Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:05.185Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:10.189Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:10.189Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:11.171Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_STFU
+2025-05-23T12:10:11.171Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: STFU initiator was remote.
+2025-05-23T12:10:11.171Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending peer that we want to STFU.
+2025-05-23T12:10:11.171Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_STFU
+2025-05-23T12:10:11.171Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: STFU complete: we are quiescent
+2025-05-23T12:10:11.171Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: STFU complete: setting stfu_wait_single_msg = true
+2025-05-23T12:10:11.175Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_SPLICE
+2025-05-23T12:10:11.175Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice peer is rotating funding pubkey
+2025-05-23T12:10:11.175Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_SPLICE_ACK
+2025-05-23T12:10:11.175Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending master 7208
+2025-05-23T12:10:11.175Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: ... , awaiting 7209
+2025-05-23T12:10:11.175Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got it!
+2025-05-23T12:10:11.205Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_ADD_INPUT
+2025-05-23T12:10:11.205Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:10:11.208Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_ADD_INPUT
+2025-05-23T12:10:11.208Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:10:11.209Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_ADD_OUTPUT
+2025-05-23T12:10:11.209Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:10:11.211Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_ADD_OUTPUT
+2025-05-23T12:10:11.211Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:10:11.230Z DEBUG   connectd: drain_peer
+2025-05-23T12:10:11.230Z DEBUG   connectd: drain_peer draining subd!
+2025-05-23T12:10:11.230Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-lightningd: peer_disconnect_done
+2025-05-23T12:10:11.230Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Will try reconnect in 1 seconds
+2025-05-23T12:10:11.230Z DEBUG   connectd: maybe_free_peer freeing peer!
+2025-05-23T12:10:11.230Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Peer connection lost
+2025-05-23T12:10:11.230Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Status closed, but not exited. Killing
+2025-05-23T12:10:11.230Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2025-05-23T12:10:11.231Z DEBUG   plugin-funder: Cleaning up inflights for peer id 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179
+2025-05-23T12:10:12.806Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Failed connected out: Unable to connect, no address known for peer
+2025-05-23T12:10:12.806Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Will try reconnect in 2 seconds
+2025-05-23T12:10:15.193Z DEBUG   gossipd: seeker: need more peers for gossip (have 0)
+2025-05-23T12:10:15.193Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:15.379Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Failed connected out: Unable to connect, no address known for peer
+2025-05-23T12:10:15.379Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Will try reconnect in 4 seconds
+2025-05-23T12:10:16.898Z DEBUG   03837ac1dd5393ee054b54fb820112502fecb49894781ca00eb8161a398a8e2777-hsmd: Got WIRE_HSMD_ECDH_REQ
+2025-05-23T12:10:16.898Z DEBUG   hsmd: Client: Received message 1 from client
+2025-05-23T12:10:16.902Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Connect IN
+2025-05-23T12:10:16.902Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_INIT
+2025-05-23T12:10:16.906Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_in WIRE_INIT
+2025-05-23T12:10:16.906Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Handed peer, entering loop
+2025-05-23T12:10:16.906Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_GOSSIP_TIMESTAMP_FILTER
+2025-05-23T12:10:16.906Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: seeker: starting gossip (streaming)
+2025-05-23T12:10:16.906Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Peer has reconnected, state CHANNELD_NORMAL: connecting subd
+2025-05-23T12:10:16.909Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: pid 1479753, msgfd 87
+2025-05-23T12:10:16.909Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Already have funding locked in
+2025-05-23T12:10:16.909Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Ignoring fee limits!
+2025-05-23T12:10:16.909Z DEBUG   hsmd: new_client: 1
+2025-05-23T12:10:16.909Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_in UNKNOWN 39409
+2025-05-23T12:10:16.910Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: option_static_remotekey = 1, option_anchor_outputs = 0 option_anchors_zero_fee_htlc_tx = 1
+2025-05-23T12:10:16.910Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: init REMOTE: remote_per_commit = 03aa787790adc1514762e4268d5d9991e2b082b744a6342d1c66fc635dad4d9bc9, old_remote_per_commit = 03b790cae42b31fda926498021b0787185343030b9e7adb922b3c319d2ed6e505c next_idx_local = 3 next_idx_remote = 3 revocations_received = 2 feerates { RCVD_ADD_ACK_REVOCATION:316 } range 1-4294967295 blockheights { RCVD_ADD_ACK_REVOCATION:0 }, our current 159
+2025-05-23T12:10:16.910Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_in WIRE_GOSSIP_TIMESTAMP_FILTER
+2025-05-23T12:10:16.910Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:10:16.910Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:10:16.910Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:10:16.910Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:10:16.910Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Setting send_tlvs->my_current_funding_locked_txid to d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624
+2025-05-23T12:10:16.910Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending channel_reestablish with next_funding_tx_id: NULL, your_last_funding_locked: d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624, my_current_funding_locked: d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624, next_local_commit_number: 3,
+2025-05-23T12:10:16.910Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_CHANNEL_REESTABLISH
+2025-05-23T12:10:16.910Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Sent reestablish, waiting for theirs
+2025-05-23T12:10:16.916Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_CHANNEL_REESTABLISH
+2025-05-23T12:10:16.916Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got reestablish commit=2 revoke=2 inflights: 0, active splices: 0
+2025-05-23T12:10:16.916Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice resume check with local_next_funding: omitted, remote_next_funding: received, inflights: 0
+2025-05-23T12:10:16.916Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: We are initiating tx_abort for reason: next_funding_txid not recognized. Sending tx_abort.
+2025-05-23T12:10:16.916Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_ABORT
+2025-05-23T12:10:16.957Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_ABORT
+2025-05-23T12:10:16.957Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: We got TX_ABORT ack, now telling master about it
+2025-05-23T12:10:16.957Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-lightningd: Splice aborted next_funding_txid not recognized. Sending tx_abort.
+2025-05-23T12:10:16.957Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Restarting channeld after tx_abort on CHANNELD_NORMAL channel
+2025-05-23T12:10:16.958Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: pid 1479756, msgfd 88
+2025-05-23T12:10:16.958Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Status closed, but not exited. Killing
+2025-05-23T12:10:16.959Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Already have funding locked in
+2025-05-23T12:10:16.959Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Ignoring fee limits!
+2025-05-23T12:10:16.959Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: channel_gossip: reestablished
+2025-05-23T12:10:16.959Z DEBUG   hsmd: new_client: 1
+2025-05-23T12:10:16.959Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: option_static_remotekey = 1, option_anchor_outputs = 0 option_anchors_zero_fee_htlc_tx = 1
+2025-05-23T12:10:16.959Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: init REMOTE: remote_per_commit = 03aa787790adc1514762e4268d5d9991e2b082b744a6342d1c66fc635dad4d9bc9, old_remote_per_commit = 03b790cae42b31fda926498021b0787185343030b9e7adb922b3c319d2ed6e505c next_idx_local = 3 next_idx_remote = 3 revocations_received = 2 feerates { RCVD_ADD_ACK_REVOCATION:316 } range 1-4294967295 blockheights { RCVD_ADD_ACK_REVOCATION:0 }, our current 159
+2025-05-23T12:10:16.959Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:10:16.959Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:10:16.959Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Channel ready for use.
+2025-05-23T12:10:16.959Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Channel ready for use.
+2025-05-23T12:10:20.196Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:20.196Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:25.196Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:25.196Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:30.201Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:30.201Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:35.205Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:35.205Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:40.206Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:40.206Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:45.206Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:45.206Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:50.206Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:50.206Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:10:55.206Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:10:55.207Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:00.211Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:00.211Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:05.215Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:05.215Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:10.225Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:10.225Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:15.224Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:15.224Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:20.228Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:20.228Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:25.228Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:25.228Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:30.232Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:30.232Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:35.237Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:35.237Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:40.241Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:40.241Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:45.246Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:45.246Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:46.661Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_STFU
+2025-05-23T12:11:46.661Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: STFU initiator was remote.
+2025-05-23T12:11:46.661Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending peer that we want to STFU.
+2025-05-23T12:11:46.661Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_STFU
+2025-05-23T12:11:46.661Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: STFU complete: we are quiescent
+2025-05-23T12:11:46.661Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: STFU complete: setting stfu_wait_single_msg = true
+2025-05-23T12:11:46.663Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_SPLICE
+2025-05-23T12:11:46.663Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice peer is rotating funding pubkey
+2025-05-23T12:11:46.663Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_SPLICE_ACK
+2025-05-23T12:11:46.663Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending master 7208
+2025-05-23T12:11:46.663Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: ... , awaiting 7209
+2025-05-23T12:11:46.663Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got it!
+2025-05-23T12:11:46.693Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_ADD_INPUT
+2025-05-23T12:11:46.693Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:11:46.698Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_ADD_INPUT
+2025-05-23T12:11:46.698Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:11:46.700Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_ADD_OUTPUT
+2025-05-23T12:11:46.701Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:11:46.702Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_ADD_OUTPUT
+2025-05-23T12:11:46.702Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_COMPLETE
+2025-05-23T12:11:46.704Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_COMPLETE
+2025-05-23T12:11:46.704Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice accepter adding inflight: cHNidP8BAgQCAAAAAQMEnwAAAAEEAQIBBQECAQYBAwH7BAIAAAAAAQBxAgAAAAF5Rwo52pSkGnhPhxXBVhW1/s4mMMkX703WdqB9cmh4AAAAAAAA/f///wIA4fUFAAAAABYAFIae55R77TOXUfcjucmOeumMA1D0cxAQJAEAAAAWABRB4uMMhklSy15Ap7zXfOvufZsqBoMAAAABDiB2gqNgXTe5bKckzD1v7fG3mZMj72LXmJaoZ4jtsry+ngEPBAEAAAABEAT9////DPwJbGlnaHRuaW5nAQgAAAAAAAAAAAABAIkCAAAAAZf7IJi0y9zu+nWcdwMX7hDYWa1U0hFd8o9NgY2qLNHEAAAAAAD9////AiChBwAAAAAAIgAgPP5K6b3zF3O2KT03Kt2gmiJNRRrviJAo4TNJjlbpUHA5UP4pAQAAACJRIHscE1gFvhu214jRwWJAj2UyK/JFgE9XkbhoCTSLLzOblgAAAAEOICTW0WzChAterJvIRhoblV6nZv6Fu3g6q/d/u0Lmr6vVAQ8EAAAAAAEQBP3///8M/AlsaWdodG5pbmcBCAAAAAAAAAACAAEDCLrbBwAAAAAAAQQiACA85FhT4RrewZM9bGMlLkDtqyyjt2D4yNbJq0QviNs0nQz8CWxpZ2h0bmluZwEIAAAAAAAAAAQAAQMIz9QPJAEAAAABBCJRIPwpPuJo0f/KO2kLqNDCe6UdOEb+p8E8ZiC/U1gtjPqpDPwJbGlnaHRuaW5nAQgAAAAAAAAABgA=
+2025-05-23T12:11:46.704Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending master 7216
+2025-05-23T12:11:46.704Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: lightningd adding inflight with txid 6f8e7ccb2380e9adc7b9c4fc7f107bdee1ddce0232c489574b0e91c0ccadf964
+2025-05-23T12:11:46.706Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: ... , awaiting 7217
+2025-05-23T12:11:46.706Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got it!
+2025-05-23T12:11:46.706Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SETUP_CHANNEL
+2025-05-23T12:11:46.706Z DEBUG   hsmd: Client: Received message 31 from client
+2025-05-23T12:11:46.706Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice negotation, will send commit, recv commit, send signature, recv signature as accepter
+2025-05-23T12:11:46.706Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice accepter: we commit first; next_index_local:3; next_index_remote:3
+2025-05-23T12:11:46.706Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: send_commit_part(splice: 0, remote_splice: 15002, index: 2)
+2025-05-23T12:11:46.707Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SIGN_REMOTE_COMMITMENT_TX
+2025-05-23T12:11:46.707Z DEBUG   hsmd: Client: Received message 19 from client
+2025-05-23T12:11:46.707Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Creating commit_sig signature 2 304402205e519494d736685187ed23dbf5955adeb1f9b8237a72f84366e210ee2a79006e02201d571376b0e5ed9ca3e0819386e6c24b560614d35eee10b0908a203c69be3fd701 for tx 020000000164f9adccc0910e4b5789c43202cedde1de7b107ffcc4b9c7ade98023cb7c8e6f0000000000ffafcf80044a0100000000000022002047f070eb478b4f32274153e75b088d2a8638397346eaf2fbed1f3bcf2b4ed6e14a01000000000000220020766e558ef9821a44b82d87a877fdacfe8f27c8c3066132d1df93a21f5db35aaf50c30000000000002200207b83ba2da612a6ee26549fd2ffacc199c33984e36fe61332c9927f6c72c1bdae73140700000000002200205214a59f48edb0694f92de5183b67c32b6b612f458c77615592ec02f9923fd7a1d654c20 wscript 5221021f3a82f41022e151530787c24f9ce7169da0b8adb735a43e97c904b19e1a77b92102e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df0776152ae key 02e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df07761
+2025-05-23T12:11:46.707Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_COMMITMENT_SIGNED
+2025-05-23T12:11:46.715Z DEBUG   connectd: drain_peer
+2025-05-23T12:11:46.715Z DEBUG   connectd: drain_peer draining subd!
+2025-05-23T12:11:46.715Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-lightningd: peer_disconnect_done
+2025-05-23T12:11:46.715Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Will try reconnect in 8 seconds
+2025-05-23T12:11:46.715Z DEBUG   connectd: maybe_free_peer freeing peer!
+2025-05-23T12:11:46.715Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Peer connection lost
+2025-05-23T12:11:46.715Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Status closed, but not exited. Killing
+2025-05-23T12:11:46.715Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2025-05-23T12:11:46.715Z DEBUG   plugin-funder: Cleaning up inflights for peer id 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179
+2025-05-23T12:11:50.249Z DEBUG   gossipd: seeker: need more peers for gossip (have 0)
+2025-05-23T12:11:50.249Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:11:52.767Z DEBUG   03837ac1dd5393ee054b54fb820112502fecb49894781ca00eb8161a398a8e2777-hsmd: Got WIRE_HSMD_ECDH_REQ
+2025-05-23T12:11:52.767Z DEBUG   hsmd: Client: Received message 1 from client
+2025-05-23T12:11:52.769Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Connect IN
+2025-05-23T12:11:52.769Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_INIT
+2025-05-23T12:11:52.773Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_in WIRE_INIT
+2025-05-23T12:11:52.773Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Handed peer, entering loop
+2025-05-23T12:11:52.773Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-gossipd: seeker: starting gossip (streaming)
+2025-05-23T12:11:52.773Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Peer has reconnected, state CHANNELD_NORMAL: connecting subd
+2025-05-23T12:11:52.776Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: pid 1480092, msgfd 87
+2025-05-23T12:11:52.776Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Already have funding locked in
+2025-05-23T12:11:52.776Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Ignoring fee limits!
+2025-05-23T12:11:52.776Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_GOSSIP_TIMESTAMP_FILTER
+2025-05-23T12:11:52.777Z DEBUG   hsmd: new_client: 1
+2025-05-23T12:11:52.777Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_in UNKNOWN 39409
+2025-05-23T12:11:52.777Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: option_static_remotekey = 1, option_anchor_outputs = 0 option_anchors_zero_fee_htlc_tx = 1
+2025-05-23T12:11:52.777Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: init REMOTE: remote_per_commit = 03aa787790adc1514762e4268d5d9991e2b082b744a6342d1c66fc635dad4d9bc9, old_remote_per_commit = 03b790cae42b31fda926498021b0787185343030b9e7adb922b3c319d2ed6e505c next_idx_local = 3 next_idx_remote = 3 revocations_received = 2 feerates { RCVD_ADD_ACK_REVOCATION:316 } range 1-4294967295 blockheights { RCVD_ADD_ACK_REVOCATION:0 }, our current 159
+2025-05-23T12:11:52.777Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:11:52.778Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:11:52.778Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: missing_user_signatures[0], role: 0, our_role: 1, in->signatures: 0, in->taproot_leaf_signatures.num_items: 0, in->final_witness: (nil), splice_funding_index: 1, wally_map_get_integer(0x13): (nil)
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: missing_user_signatures skipping because not our role or is splice_funding
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: missing_user_signatures[1], role: 0, our_role: 1, in->signatures: 0, in->taproot_leaf_signatures.num_items: 0, in->final_witness: (nil), splice_funding_index: 1, wally_map_get_integer(0x13): (nil)
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: missing_user_signatures skipping because not our role or is splice_funding
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: missing_user_signatures false
+2025-05-23T12:11:52.778Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Reconnecting to peer with pending inflight commit: missing, remote sigs: missing.
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Setting send_tlvs->my_current_funding_locked_txid to d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Sending channel_reestablish with next_funding_tx_id: 6f8e7ccb2380e9adc7b9c4fc7f107bdee1ddce0232c489574b0e91c0ccadf964, your_last_funding_locked: d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624, my_current_funding_locked: d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624, next_local_commit_number: 2,
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_CHANNEL_REESTABLISH
+2025-05-23T12:11:52.778Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Sent reestablish, waiting for theirs
+2025-05-23T12:11:52.780Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_in WIRE_GOSSIP_TIMESTAMP_FILTER
+2025-05-23T12:11:52.781Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_CHANNEL_REESTABLISH
+2025-05-23T12:11:52.781Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Got reestablish commit=3 revoke=2 inflights: 1, active splices: 1
+2025-05-23T12:11:52.781Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice resume check with local_next_funding: sent, remote_next_funding: received, inflights: 1
+2025-05-23T12:11:52.781Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Resuming splice negotation
+2025-05-23T12:11:52.781Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice negotation, will not send commit, recv commit, send signature, recv signature as accepter
+2025-05-23T12:11:52.787Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_COMMITMENT_SIGNED
+2025-05-23T12:11:52.787Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice accepter: we recv commit; next_index_local:3; next_index_remote:3
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_GET_PER_COMMITMENT_POINT
+2025-05-23T12:11:52.788Z DEBUG   hsmd: Client: Received message 18 from client
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: handle_peer_commit_sig(splice: 0, remote_splice: 15002, commit_index: 1, local_index: 2, msg: 0x5abd1d639288)
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Received commit
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Feerates are 316/316
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Committed 0, removing 0, adding 0
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: We need 6015sat at feerate 316 for 0 untrimmed htlcs: we have 450000000msat/450000000msat (will have 450000000msat)
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: handle_peer_commit_sig for inflight outpoint 6f8e7ccb2380e9adc7b9c4fc7f107bdee1ddce0232c489574b0e91c0ccadf964
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Derived key 03d11d9a335a1670be0d05e2cb7dce2e0946e4fa59b98da885e4d7e0473700abba from basepoint 0255c2d488332f39ebb1259ec0df082334ad68e4fea6a0ad2b17825f20f6eb6000, point 0379888727623fda9f0a77de5fb3bf0dae011d0571c1f9ee8eee345ac210de652f
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Received commit_sig with 0 htlc sigs
+2025-05-23T12:11:52.788Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_VALIDATE_COMMITMENT_TX
+2025-05-23T12:11:52.788Z DEBUG   hsmd: Client: Received message 35 from client
+2025-05-23T12:11:52.790Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice signing tx: 02000000027682a3605d37b96ca724cc3d6fedf1b7999323ef62d79896a86788edb2bcbe9e0100000000fdffffff24d6d16cc2840b5eac9bc8461a1b955ea766fe85bb783aabf77fbb42e6afabd50000000000fdffffff02badb0700000000002200203ce45853e11adec1933d6c63252e40edab2ca3b760f8c8d6c9ab442f88db349dcfd40f2401000000225120fc293ee268d1ffca3b690ba8d0c27ba51d3846fea7c13c6620bf53582d8cfaa99f000000
+2025-05-23T12:11:52.791Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: State changed from CHANNELD_NORMAL to CHANNELD_AWAITING_SPLICE
+2025-05-23T12:11:52.792Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Watching splice inflight 6f8e7ccb2380e9adc7b9c4fc7f107bdee1ddce0232c489574b0e91c0ccadf964
+2025-05-23T12:11:52.794Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_TX_SIGNATURES
+2025-05-23T12:11:52.794Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice: Awaiting signature message
+2025-05-23T12:11:52.794Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_SIGN_SPLICE_TX
+2025-05-23T12:11:52.794Z DEBUG   hsmd: Client: Received message 29 from client
+2025-05-23T12:11:52.797Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_TX_SIGNATURES
+2025-05-23T12:11:52.797Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Splice: Got peer message! (is signature?)
+2025-05-23T12:11:52.798Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Left STFU mode.
+2025-05-23T12:11:52.800Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Broadcasting splice tx 020000000001027682a3605d37b96ca724cc3d6fedf1b7999323ef62d79896a86788edb2bcbe9e0100000000fdffffff24d6d16cc2840b5eac9bc8461a1b955ea766fe85bb783aabf77fbb42e6afabd50000000000fdffffff02badb0700000000002200203ce45853e11adec1933d6c63252e40edab2ca3b760f8c8d6c9ab442f88db349dcfd40f2401000000225120fc293ee268d1ffca3b690ba8d0c27ba51d3846fea7c13c6620bf53582d8cfaa9024730440220296aaf070854050ef6e2fa0408a3a57e86551c3dde12ae88e89cd19677b9eaa00220279b05b8017f50a0d4d06ef0cce2157ccac4cef023b6d0b2b0925efdffb0b1de012102c569e4cb6eb721dff94d989d3170aa5d521cd226d087dc994eedb839c2d06aa504004730440220715e4ba4b311d4d7b9490a82440d9037ade850ca0ea394bb68e390ffd59e620a0220443789bc7af0ad7c1fbdfa628df0079cb57634128cec1eeb67ba36dc280b5f3a01483045022100d0e5eb33251975acd681b6e7362222456868ad454f64223c32941319005fb87102201157f58818ae8759fd643e1d6964bc1bd6356b0440508544817f99b00122fcb60147522102e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df0776121031457009d42038ef5773edd940348a2b74a1b56f002a7f736b712612824c5247152ae9f000000 for channel b8e453c3ea3873600ebdfaba36405aa4b077c63c7f45cd398f55521cb0935679.
+2025-05-23T12:11:52.800Z DEBUG   lightningd: sendrawtransaction: 020000000001027682a3605d37b96ca724cc3d6fedf1b7999323ef62d79896a86788edb2bcbe9e0100000000fdffffff24d6d16cc2840b5eac9bc8461a1b955ea766fe85bb783aabf77fbb42e6afabd50000000000fdffffff02badb0700000000002200203ce45853e11adec1933d6c63252e40edab2ca3b760f8c8d6c9ab442f88db349dcfd40f2401000000225120fc293ee268d1ffca3b690ba8d0c27ba51d3846fea7c13c6620bf53582d8cfaa9024730440220296aaf070854050ef6e2fa0408a3a57e86551c3dde12ae88e89cd19677b9eaa00220279b05b8017f50a0d4d06ef0cce2157ccac4cef023b6d0b2b0925efdffb0b1de012102c569e4cb6eb721dff94d989d3170aa5d521cd226d087dc994eedb839c2d06aa504004730440220715e4ba4b311d4d7b9490a82440d9037ade850ca0ea394bb68e390ffd59e620a0220443789bc7af0ad7c1fbdfa628df0079cb57634128cec1eeb67ba36dc280b5f3a01483045022100d0e5eb33251975acd681b6e7362222456868ad454f64223c32941319005fb87102201157f58818ae8759fd643e1d6964bc1bd6356b0440508544817f99b00122fcb60147522102e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df0776121031457009d42038ef5773edd940348a2b74a1b56f002a7f736b712612824c5247152ae9f000000
+2025-05-23T12:11:52.801Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: next_revocation_number = 2
+2025-05-23T12:11:52.801Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: option_static_remotekey: fields are correct
+2025-05-23T12:11:52.802Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: channel_gossip: reestablished
+2025-05-23T12:11:52.802Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard perm: Reconnected, and reestablished.
+2025-05-23T12:11:52.802Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Channel ready for use.
+2025-05-23T12:11:52.802Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Channel ready for use.
+2025-05-23T12:11:52.802Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_REVOKE_COMMITMENT_TX
+2025-05-23T12:11:52.802Z DEBUG   hsmd: Client: Received message 40 from client
+2025-05-23T12:11:52.804Z DEBUG   plugin-bcli: sendrawtx exit 0 (bitcoin-cli -regtest -datadir=/home/remyers/github/lightning-cfg/.bitcoin -rpcclienttimeout=60 -rpcconnect=127.0.0.1 -rpcport=18888 -rpcuser=... -stdinrpcpass sendrawtransaction 020000000001027682a3605d37b96ca724cc3d6fedf1b7999323ef62d79896a86788edb2bcbe9e0100000000fdffffff24d6d16cc2840b5eac9bc8461a1b955ea766fe85bb783aabf77fbb42e6afabd50000000000fdffffff02badb0700000000002200203ce45853e11adec1933d6c63252e40edab2ca3b760f8c8d6c9ab442f88db349dcfd40f2401000000225120fc293ee268d1ffca3b690ba8d0c27ba51d3846fea7c13c6620bf53582d8cfaa9024730440220296aaf070854050ef6e2fa0408a3a57e86551c3dde12ae88e89cd19677b9eaa00220279b05b8017f50a0d4d06ef0cce2157ccac4cef023b6d0b2b0925efdffb0b1de012102c569e4cb6eb721dff94d989d3170aa5d521cd226d087dc994eedb839c2d06aa504004730440220715e4ba4b311d4d7b9490a82440d9037ade850ca0ea394bb68e390ffd59e620a0220443789bc7af0ad7c1fbdfa628df0079cb57634128cec1eeb67ba36dc280b5f3a01483045022100d0e5eb33251975acd681b6e7362222456868ad454f64223c32941319005fb87102201157f58818ae8759fd643e1d6964bc1bd6356b0440508544817f99b00122fcb60147522102e2d17cbda6e8e7c94e4148d456c03f93b54750735ad18d9f960d85917df0776121031457009d42038ef5773edd940348a2b74a1b56f002a7f736b712612824c5247152ae9f000000) 
+2025-05-23T12:11:52.808Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Trying commit
+2025-05-23T12:11:52.808Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Can't send commit: nothing to send, feechange not wanted ({ RCVD_ADD_ACK_REVOCATION:316 }) blockheight not wanted ({ RCVD_ADD_ACK_REVOCATION:0 })
+2025-05-23T12:11:55.249Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:11:55.249Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:00.253Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:00.253Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:05.257Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:05.257Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:10.260Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:10.260Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:15.264Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:15.264Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:20.268Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:20.268Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:25.268Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:25.268Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:30.272Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:30.272Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:35.276Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:35.276Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:40.280Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:40.280Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:45.284Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:45.284Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:50.289Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:50.289Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:55.289Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:12:55.289Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:12:59.599Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_SPLICE_LOCKED
+2025-05-23T12:13:00.292Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:13:00.292Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:13:00.795Z DEBUG   lightningd: Adding block 160: 21e7baa76ca08a96370b8089ae438625530bd3712a6fecccded472d6a26d71c5
+2025-05-23T12:13:00.795Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Got UTXO spend for d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624:0: 6f8e7ccb2380e9adc7b9c4fc7f107bdee1ddce0232c489574b0e91c0ccadf964
+2025-05-23T12:13:00.807Z DEBUG   gossipd: Deleting channel 151x1x0 due to the funding outpoint being spent
+2025-05-23T12:13:00.819Z DEBUG   lightningd: Adding block 161: 489bb32fd33d93d974c167c2116e067eb8bb3f1823fa0e4545ab8c0613a72d80
+2025-05-23T12:13:00.831Z DEBUG   lightningd: Adding block 162: 708ea8de40b5c388e7a9ede69cf38919846387c0881f8ca4db09df399e5716bf
+2025-05-23T12:13:00.843Z DEBUG   lightningd: Adding block 163: 354fd1f874699a4c53ccf25b485f1597f92cd4bd1971a2ffcfc6677d6dd32963
+2025-05-23T12:13:00.855Z DEBUG   lightningd: Adding block 164: 6eae4dcbd094f5b5f521e95031decd04938d0a8c523856142ee35be9122bb34d
+2025-05-23T12:13:00.867Z DEBUG   lightningd: Adding block 165: 01cf456077a22d7506d2f647217e9e4366abbb828e79242832799e6801ebee68
+2025-05-23T12:13:00.880Z DEBUG   lightningd: Adding block 166: 40600dbc5786e95e79da4094fc41830f373272f1105c6bc61fb65f19b5a9a957
+2025-05-23T12:13:00.890Z DEBUG   lightningd: Adding block 167: 2c2c2c834e496269b2911e8efbf2346af2cfd44006d1b7964ab5f7c87316d34e
+2025-05-23T12:13:00.901Z DEBUG   lightningd: Adding block 168: 644b008a7834427bf331368abef597a77b952fdee0cb66f0224a95aa7759cc3f
+2025-05-23T12:13:00.909Z DEBUG   lightningd: Got first depth change 0->9 for 6f8e7ccb2380e9adc7b9c4fc7f107bdee1ddce0232c489574b0e91c0ccadf964
+2025-05-23T12:13:00.909Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: splice_depth_cb: sending funding depth scid: 160x1x0
+2025-05-23T12:13:00.909Z DEBUG   lightningd: Got first depth change 0->18 for d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624
+2025-05-23T12:13:00.909Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Funding tx d5abafe642bb7ff7ab3a78bb85fe66a75e951b1a46c89bac5e0b84c26cd1d624 depth 18 of 9
+2025-05-23T12:13:00.909Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Sending towire_channeld_funding_depth with channel state CHANNELD_AWAITING_SPLICE
+2025-05-23T12:13:00.911Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_NEW_BLOCKHEIGHT_REPLY with 0 fds
+2025-05-23T12:13:00.915Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_CHECK_OUTPOINT
+2025-05-23T12:13:00.915Z DEBUG   hsmd: Client: Received message 32 from client
+2025-05-23T12:13:00.915Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-hsmd: Got WIRE_HSMD_LOCK_OUTPOINT
+2025-05-23T12:13:00.915Z DEBUG   hsmd: Client: Received message 37 from client
+2025-05-23T12:13:00.918Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Current channel id is 151x1x0, splice_short_channel_id now set to 160x1x0
+2025-05-23T12:13:00.918Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_out WIRE_SPLICE_LOCKED
+2025-05-23T12:13:00.918Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: mutual splice_locked, scid LOCAL & REMOTE updated to: 160x1x0
+2025-05-23T12:13:00.918Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: mutual splice_locked, updating change from: { funding=500000sat, opener=REMOTE, local={ owed_local=50000000msat, owed_remote=450000000msat }, remote={ owed_local=50000000msat, owed_remote=450000000msat } }
+2025-05-23T12:13:00.918Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: mutual splice_locked, channel updated to: { funding=515002sat, opener=REMOTE, local={ owed_local=50000000msat, owed_remote=465002000msat }, remote={ owed_local=50000000msat, owed_remote=465002000msat } }
+2025-05-23T12:13:00.920Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: lightningd, splice_locked clearing inflights
+2025-05-23T12:13:00.921Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Short channel id changed from 151x1x0->160x1x0
+2025-05-23T12:13:00.921Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: gossip state: CGOSSIP_ANNOUNCED->CGOSSIP_WAITING_FOR_MATCHING_PEER_SIGS (Splicing)
+2025-05-23T12:13:00.924Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Watching for funding txid: 6f8e7ccb2380e9adc7b9c4fc7f107bdee1ddce0232c489574b0e91c0ccadf964
+2025-05-23T12:13:00.924Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: State changed from CHANNELD_AWAITING_SPLICE to CHANNELD_NORMAL
+2025-05-23T12:13:00.924Z DEBUG   lightningd: update_feerates: feerate = 1250, min=1, max=2530, penalty=253
+2025-05-23T12:13:00.924Z UNUSUAL 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Can't unwatch txid 6f8e7ccb2380e9adc7b9c4fc7f107bdee1ddce0232c489574b0e91c0ccadf964
+2025-05-23T12:13:00.926Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Channel ready for use.
+2025-05-23T12:13:00.926Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: handle_funding_depth: Setting short_channel_ids[LOCAL] to 151x1x0
+2025-05-23T12:13:00.926Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: billboard: Channel ready for use.
+2025-05-23T12:13:00.926Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: peer_in WIRE_ANNOUNCEMENT_SIGNATURES
+2025-05-23T12:13:00.927Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: channel_gossip: received announcement sigs for 160x1x0 (we have 160x1x0)
+2025-05-23T12:13:00.927Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: gossip state: CGOSSIP_WAITING_FOR_MATCHING_PEER_SIGS->CGOSSIP_ANNOUNCED (Got peer announcement signatures after already at 6 confirmations)
+2025-05-23T12:13:00.929Z DEBUG   hsmd: Client: Received message 4 from client
+2025-05-23T12:13:00.929Z DEBUG   hsmd: Client: Received message 3 from client
+2025-05-23T12:13:00.929Z DEBUG   hsmd: Client: Received message 4 from client
+2025-05-23T12:13:00.929Z DEBUG   hsmd: Client: Received message 3 from client
+2025-05-23T12:13:00.929Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: peer_out WIRE_ANNOUNCEMENT_SIGNATURES
+2025-05-23T12:13:00.930Z DEBUG   gossipd: inject_gossip: WIRE_CHANNEL_ANNOUNCEMENT
+2025-05-23T12:13:00.930Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_ADDGOSSIP_REPLY with 0 fds
+2025-05-23T12:13:00.930Z DEBUG   gossipd: inject_gossip: WIRE_CHANNEL_UPDATE
+2025-05-23T12:13:00.930Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_ADDGOSSIP_REPLY with 0 fds
+2025-05-23T12:13:00.933Z DEBUG   plugin-bookkeeper: coin_move 2 (channel_close) 0msat -50000000msat chain_mvt 1748002380
+2025-05-23T12:13:00.933Z DEBUG   plugin-bookkeeper: coin_move 2 (channel_open) 50000000msat -0msat chain_mvt 1748002380
+2025-05-23T12:13:05.296Z DEBUG   gossipd: seeker: need more peers for gossip (have 1)
+2025-05-23T12:13:05.296Z DEBUG   gossipd: seeker: no more potential peers found
+2025-05-23T12:13:07.526Z DEBUG   connectd: drain_peer
+2025-05-23T12:13:07.526Z DEBUG   connectd: drain_peer draining subd!
+2025-05-23T12:13:07.526Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-lightningd: peer_disconnect_done
+2025-05-23T12:13:07.526Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-connectd: Will try reconnect in 16 seconds
+2025-05-23T12:13:07.526Z DEBUG   connectd: maybe_free_peer freeing peer!
+2025-05-23T12:13:07.526Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Peer connection lost
+2025-05-23T12:13:07.526Z DEBUG   02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-channeld-chan#1: Status closed, but not exited. Killing
+2025-05-23T12:13:07.526Z INFO    02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179-chan#1: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2025-05-23T12:13:07.526Z DEBUG   plugin-funder: Cleaning up inflights for peer id 02f43fc68fbd65f4d7f6ab2c7c7a5e97a30e91b99ee78ae0342966b3773d915179
+2025-05-23T12:13:07.528Z UNUSUAL lightningd: JSON-RPC shutdown
+2025-05-23T12:13:07.528Z DEBUG   lightningd: io_break: start_json_stream
+2025-05-23T12:13:07.528Z DEBUG   lightningd: io_loop_with_timers: main
+2025-05-23T12:13:07.528Z DEBUG   connectd: REPLY WIRE_CONNECTD_START_SHUTDOWN_REPLY with 0 fds
+2025-05-23T12:13:07.528Z DEBUG   lightningd: io_break: connectd_start_shutdown_reply
+2025-05-23T12:13:07.529Z DEBUG   plugin-autoclean: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-chanbackup: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-bcli: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-commando: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-funder: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-topology: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-exposesecret: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-keysend: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-offers: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-pay: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-recklessrpc: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-recover: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-txprepare: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-cln-renepay: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.529Z DEBUG   plugin-bookkeeper: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.530Z DEBUG   plugin-cln-xpay: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.530Z DEBUG   plugin-spenderp: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.530Z DEBUG   plugin-cln-askrene: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.530Z DEBUG   plugin-sql: Killing plugin: exited during normal operation
+2025-05-23T12:13:07.530Z DEBUG   lightningd: io_break: destroy_plugin
+2025-05-23T12:13:07.530Z DEBUG   lightningd: Command returned result after jcon close
+2025-05-23T12:13:07.530Z DEBUG   connectd: Shutting down
+2025-05-23T12:13:07.530Z DEBUG   gossipd: Shutting down
+2025-05-23T12:13:07.530Z DEBUG   hsmd: Shutting down

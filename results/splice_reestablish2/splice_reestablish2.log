@@ -1,0 +1,40 @@
+Alice/eclair: 0.13.0-SNAPSHOT-8370bd2
+Bob/lightningd: v25.02-301-gcca076b
+fund Bob wallet
+dce456799a880510fd5336bf904a1610df24b6671572dcdc9594900ba35beac7
+Alice/Eclair is 031e7d9a2ee1138d38ba7cb72d35a03075d7c748b098fea3e55e40c409f5786e39
+Bob/CLightning is 0248f50a73fdaaabef8e77c1c1eac867b053fe67c3f19aa0ae1e220a564fa57999
+Alice connects to Bob: connected
+Alice opens channel to Bob
+channelId is 7c9f81b85be9c6b0ec60857c04c918f62e16aeefd13644bd80ac5cac4b4bf6af
+Confirmed funding index: 0
+Unconfirmed funding index: 
+Funding TXID is 67af8baeea311faa3b73fa2e9e4f18c51957163f36fd4bad1218993cc071794a
+Channel balance amounts match.
+to_alice: 500000000
+to_bob: 0
+== Alice pays invoice for 50000 sats to Bob
+Invoice Id: f2adb8b7-1695-4b6a-84fc-7a5628ea7c49
+Channel balance amounts match.
+to_alice: 450000000
+to_bob: 50000000
+[bob] invoice is: paid
+== Alice initiates splice-in of 15003 sat with Bob, Alice disconnects after Bob sends their tx_signatures
+== Test: Disconnection with one side sending tx_signatures
+Log check passed: Ignoring their tx_signatures for interop test: Disconnection with one side sending tx_signatures (x1)
+Confirmed funding index: 1
+Unconfirmed funding index: 
+Funding TXID is baf2aaf658a5baa445b1989f3861971e97f8977e541082f7b8321975dc034b35
+Channel balance amounts match.
+to_alice: 465003000
+to_bob: 50000000
+== Alice initiates splice-in of 15004 sat with Bob, Alice disconnects before sending their tx_signatures
+== Test: Disconnection with both sides sending tx_signatures
+Log check passed: Not sending our tx_signatures for interop test: Disconnection with both sides sending tx_signatures (x1)
+Confirmed funding index: 2
+Unconfirmed funding index: 
+Funding TXID is 3cc4e2f554f3e37c2025d95679f09d65c659bb68a28545619aead876c47a1d9a
+Channel balance amounts match.
+to_alice: 480007000
+to_bob: 50000000
+== Finished
